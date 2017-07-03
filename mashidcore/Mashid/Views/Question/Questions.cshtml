@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Question>
+
+<div class="container">
+    @foreach (var q in this.Model)
+    {
+        <div class="row">
+            <div class="col">
+                <div class="bg-primary text-white">
+                    @q.Id
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-success text-white">
+                    @q.Text
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+
+

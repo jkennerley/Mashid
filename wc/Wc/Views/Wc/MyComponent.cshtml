@@ -1,0 +1,20 @@
+﻿@{Layout = null;}
+<template>
+    <style>
+        p {
+            color: crimson;
+            background-color:aliceblue;
+        }
+    </style>
+    <p>my web component</p>
+</template>
+
+<script>
+    @Html.Raw(File.ReadAllText(Server.MapPath("~/components/src/MyComponent.js")))
+    @*
+    @Html.Raw(File.ReadAllText(Server.MapPath("~/components/src/MyComponent.min.js")))
+    *@
+</script>
+
+
+

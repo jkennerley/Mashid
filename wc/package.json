@@ -1,0 +1,30 @@
+{
+    "name": "wc",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "ts-transpile-ver": "tsc --version",
+        "ts-transpile": "tsc -p WC/components/tsconfig.json",
+        "ts-transpile-watch": "tsc -p WC/components/tsconfig.json -w",
+        "-x-babel-transpile": "babel --presets es2015 TotalAoc.Centrik/components/source-babel  --out-dir TotalAoc.Centrik/components/dist-babel",
+        "babel-transpile": "babel --presets es2015 WC/components/source-babel  --out-dir WC/components/dist-babel "
+    },
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "babel-cli": "^6.24.1",
+        "babel-preset-es2015": "^6.24.1",
+        "typescript": "^2.3.4"
+    },
+    "dependencies": {},
+    "-vs-binding": {
+        "BeforeBuild": [
+            "ts-transpile"
+        ],
+        "ProjectOpened": [
+            "install"
+        ]
+    }
+}

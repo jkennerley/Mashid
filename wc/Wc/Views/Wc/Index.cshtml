@@ -1,0 +1,786 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h2>
+        Fundamentals
+    </h2>
+
+    <section>
+
+        <h3>
+            Overview
+        </h3>
+        <ul>
+            <li>Intro to WC</li>
+            <li>What are Native DOM Elements</li>
+            <li>Custom Elements and API Lifecycle</li>
+            <li>Extending Custom Elements</li>
+            <li>Extending Native Elements</li>
+            <li>Using Shadow DOM</li>
+            <li>HTML Templates</li>
+            <li>HTML Imports</li>
+        </ul>
+
+        <h3>
+            Intro to WC
+        </h3>
+        <ul>
+            <li>Custom Elements</li>
+            <li>Shadow DOM</li>
+            <li>Templates</li>
+            <li>HTML Imports</li>
+        </ul>
+
+        <h3>
+            What are Native DOM Elements ?
+        </h3>
+        <ul>
+            <li>Web Components are DOM Elements</li>
+            <li>Create your own DOM Element</li>
+            <li>Add custom properties, methods, and functionality</li>
+            <li>extend native elements and custom elements</li>
+        </ul>
+
+        <h3>
+            Review these URLs
+        </h3>
+        <ul>
+            <li>
+                <a href="https://developers.google.com/web/fundamentals/getting-started/primers/customelements">https://developers.google.com/web/fundamentals/getting-started/primers/customelements</a>
+            </li>
+            <li>
+                <a href="https://www.webcomponents.org/introduction">https://www.webcomponents.org/introduction</a>
+            </li>
+            <li>
+                <a href="https://github.com/skatejs/skatejs">https://github.com/skatejs/skatejs</a>
+            </li>
+            <li>
+                Custom Elements: https://github.com/webcomponents/custom-elements
+            </li>
+            <li>
+                Shadow DOM: https://github.com/webcomponents/shadydom
+            </li>
+            <li>
+                Shadow DOM (CSS fills): https://github.com/webcomponents/shadycss
+            </li>
+        </ul>
+    </section>
+
+    <section>
+
+        <h3>
+            Using Custom Elements
+        </h3>
+        <section>
+
+            <ul>
+                <li>
+                    - basic anatomy of dom elements
+                </li>
+                <li>
+                    - know what callback methods custom elements provide
+                </li>
+                <li>
+                    - extending custom elements and add extend with methods
+                </li>
+                <li>
+                    - extend native elements from is= markup
+                </li>
+            </ul>
+
+            <br />
+            <a href="CustomElementsApiAndLifecyle">CustomElementsApiAndLifecyle</a>
+            <br />
+            <a href="~/components/source-ts/CustomElementsApiAndLifecycle/vanilla-hw.html">~/components/source-ts/CustomElementsApiAndLifecycle/vanilla-hw.html</a>
+            <br />
+            <a href="ExtendingWithMethodsOnCustomeElements">ExtendingWithMethodsOnCustomeElements</a>
+
+            <br />
+            Extend Native elements,
+            <a href="ExtendingNativeElements">Extending Native Elements</a>
+
+            <hr />
+            Shadow DOM Elements :
+            <br />
+            <a href="https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom">
+                Eric Bidelman about Shadow DOM v1
+            </a>
+
+            <br />
+            <ul>
+                <li>add shadow root to an element</li>
+                <li>interacting with shadow DOM</li>
+                <li>shadow DOM in action</li>
+            </ul>
+
+            <br />
+            <a href="~/wc/UsingShadowDomBasics">~/wc/UsingShadowDomBasics</a>
+        </section>
+
+        <h3>
+            HTML Templates :
+            Use for markup and structure of a component
+        </h3>
+        <section>
+
+            <br />
+            <ul>
+                <li>Create reusable segments of html in the browser</li>
+                <li>The template element is NOT rendered by the browser</li>
+                <li>Templates define markup, then rendered on the fly as needed</li>
+            </ul>
+
+            <a href="https://www.html5rocks.com/en/tutorials/webcomponents/template/">
+                https://www.html5rocks.com/en/tutorials/webcomponents/template/
+            </a>
+
+            <br />
+            <ul>
+                <li>the template element is not rendered ...</li>
+                <li>markup is defined, and used by clients to stamp in instances into the rendition ...</li>
+                <li> the rendered markup from th template may contain a specific set of data e.g. for a li or a tr/td's</li>
+            </ul>
+
+            <h4>To use template</h4>
+            <ul>
+                <li>create HTML template</li>
+                <li>access the template</li>
+                <li>render the template</li>
+                <li></li>
+            </ul>
+
+            So, ...
+            <ul>
+                <li>create a template</li>
+                <li>access the template with JS</li>
+                <li>render the instance in JS</li>
+            </ul>
+            <a href="/wc/UsingHtmlTemplates">/wc/UsingHtmlTemplates</a>
+        </section>
+
+        <h3>
+            HTML Imports
+        </h3>
+        <br />
+        <a href="https://www.html5rocks.com/en/tutorials/webcomponents/imports/">
+            HTML imports eric bidelman
+        </a>
+
+        <section>
+            <ul>
+                <li>Include HTML document, like include JavaScript file or CSS link</li>
+                <li>Good for pulling in templates</li>
+                <li>Designed to be the packaging components for Web Components  </li>
+                <li>There is contention around this spec</li>
+                <li>with link rel import HREF id, we can pull HTML as part of the document</li>
+                <li>So can pull in components containing markup HTML , CSS , JavaScript</li>
+                <li>So is designed to be a packaging mechanism </li>
+                <li>contention spec, since some vendors are waiting on the js packaging mechanism ...</li>
+                <li>is very easily polyfilled</li>
+                <li>de dupes requests by default ...</li>
+            </ul>
+
+            <br />
+            <a href="~/components/source-ts/UsingHTMLImports/UsingHTMLImports.html">~/components/source-ts/UsingHTMLImports/UsingHTMLImports.html</a>
+            <br />
+        </section>
+
+        <h2>
+            Web Components
+        </h2>
+
+        <ul>
+            <li>WC solves components</li>
+            <li>style encapsulation</li>
+            <li>de-duping getting the component template</li>
+            <li>template and putting ht template in shadow DOM</li>
+            <li></li>
+            <li>CUSTOM ELEMENTS : inheriting from native elements, adding methods, hooking into element lifecycle, adding methods to components, </li>
+            <li>Shadow DOM : putting of the encapsulated HTML/CSS somewhere</li>
+            <li>Template :  definition of template, not rendered</li>
+            <li>HTML Imports : import components, de-duping the requests</li>
+        </ul>
+    </section>
+
+    <h2>
+        Anatomy of How To Do Web Components
+    </h2>
+    <section>
+
+        <ul>
+            <li>2 Ways of writing web components</li>
+            <li>Method 1 : JS</li>
+            <li>Method 1 : HTML Import</li>
+            <li>Custom Element : the best way</li>
+            <li>WC attributes</li>
+            <li>WC properties</li>
+            <li>WC shadow DOM</li>
+            <li>Web Component skeleton</li>
+        </ul>
+
+        <br />
+        <h3>
+            Method 1 :  Pure JavaScript
+        </h3>
+        <section>
+            <br />
+            Web Components : Method 1 : Pure JavaScript
+            <br />
+            <ul>
+                <li>Advantage : familiar concepts, WC is just extra JS</li>
+                <li>Advantage : consumed like any other JS file</li>
+                <li>Advantage : easily transpiled to support older browsers</li>
+                <li>Advantage : es2015 template strings make HTML/CSS within JavaScript easier</li>
+                <li>Negative : feels awkward to write HTML/CSS in template strings</li>
+                <li>Negative : template strings makes them feel bloated</li>
+                <li>Negative : Tooling is increasing so HTML/CSS in template strings </li>
+                <li>Negative : easier to leak style since, harder to use shadow DOM</li>
+            </ul>
+
+            <a href="~/components/source-ts/WCMethod1JS/mycomponent.html">~/components/source-ts/WCMethod1JS/mycomponent.html</a>
+        </section>
+
+        <h3>
+            Method 2 : HTML Import, things are done with a HTML file
+        </h3>
+        <section>
+            example :
+            <a href="~/components/source-ts/WCMethod2HTMLImports/HTMLImport.html">
+                ~/components/source-ts/WCMethod2HTMLImports/HTMLImport.html
+            </a>
+
+            <ul>
+                <li>Advantage : auto de-duplicate, the code can include twice  </li>
+                <li>Advantage : writing HTML/CSS is more natural and has better tool support</li>
+                <li>Negative  : HTML import is contentious and not well supported</li>
+                <li>Negative  : The polyfill sorts out </li>
+                <li>Negative  : The JS being in the HTML file then becomes tricky to transpile</li>
+                <li>Negative  : Since harder to transpile, what about the support for older browsers?</li>
+                <li></li>
+            </ul>
+        </section>
+        
+        <h3>
+            WC : Pure JavaScript vs. HTML Import
+        </h3>
+        <section>
+            <ul>
+                <li>Choose Pure JS Style</li>
+                <li>1. minification of the JS is easier then when using  HTMLImports style</li>
+                <li>2. The WC-CustomElements and WC-ShadoDOM standards have better broader native reach with less polyfill </li>
+                <li>Since The JS only depends on half the WC spec, the more stable and better native supported half...</li>
+
+                <li><a href="https://www.polymer-project.org/2.0/docs/browsers">https://www.polymer-project.org/2.0/docs/browsers</a></li>
+
+                <li>See <a href="https://www.webcomponents.org/polyfills#html-imports-polyfill">WC Polyfill</a></li>
+                <li>https://www.youtube.com/watch?v=fqULJBBEVQE&feature=youtu.be</li>
+                <li><a href="https://www.polymer-project.org/1.0/docs/browsers">Polymer Support</a></li>
+                <li>With PolyFills, WC works in these browsers</li>
+            </ul>
+
+            <ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>WC</td>
+                            <td>Chr </td>
+                            <td>Opera</td>
+                            <td>Safari</td>
+                            <td>FF</td>
+                            <td>Edge</td>
+                            <td>IE11</td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Custom Elements</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Shadow DOM</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>HTML Imports</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Template</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </ul>
+
+        </section>
+
+        <h3>
+            Custom Element Best Practices
+        </h3>
+
+        example :
+        <a href="~/components/source-ts/CustomElementBestPractices/CEBestPractice.html">~/components/source-ts/CustomElementBestPractices/CEBestPractice.html</a>
+        <section>
+            <ul>
+                <li>class and element naming conventions</li>
+                <li>implementing custom methods</li>
+                <li>defining local variables</li>
+                <li>updating the component template</li>
+            </ul>
+
+            <ul>
+                <li>
+                    convert the camel case class to hyphen string. The element tag must have a hyphen
+                </li>
+                <li>
+                    the element tag must have a hyphen in it to distinguish native elements
+                </li>
+                <li>
+                    prefix custom classes with company name/~ namespace
+                </li>
+                <li>
+                    in es2015 dont have concept of private variables,
+                    use _ convention for private variables and should not be called from outside
+                </li>
+            </ul>
+
+        </section>
+
+        <h3>
+            Web Component Attributes
+        </h3>
+        <section>
+            <a href="~/components/source-ts/WebComponentAttributes/random-quote-attributes.html">~/components/source-ts/WebComponentAttributes/random-quote-attributes.html</a>
+
+            <ul>
+                <li>static observedAttributes(){ return ["" , ""]; }</li>
+                <li>trapping changes to markup attribute values, and changing code ....</li>
+            </ul>
+
+        </section>
+
+        
+
+    <h3>
+            Web Component Properties
+        </h3>
+        <section>
+
+            <br />
+            example : 
+            <a href="~/components/source-ts/WebComponentProperties/random-quote-properties.html">~/components/source-ts/WebComponentProperties/random-quote-properties.html</a>
+
+            <br />
+            This example is with shadow-dom ...
+            <a href="~/components/src/RandomQuotePropertiesWithShadowDom/random-quote-properties.html">
+                ~/components/src/RandomQuotePropertiesWithShadowDom/random-quote-properties.html
+            </a>
+
+            <ul>
+                <li>Properties, like attriabutes are a way fot the WC to rcv data, but can also send data out</li>
+                <li>differences between properties and attributes</li>
+                <li>using setter methods to retrievve data</li>
+                <li>using getter methods to provide data</li>
+            </ul>
+            <ul>
+                <li>attributes are suitable for simple strings, not suitable for objects and arrays</li>
+            </ul>
+
+
+            <br />
+            <ul>
+                <li>create a shadow root for the component</li>
+                <li>adding and updating template within the shadow dom</li>
+            </ul>
+
+        </section>
+        
+
+    <h3>
+            Web Component Scaffold
+        </h3>
+        <ul>
+            <li></li>
+        </ul>
+        Web Component Scaffold ...
+        <a href="~/components/src/ComponentScaffold/component-scaffold.html">~/components/src/ComponentScaffold/component-scaffold.html</a>
+
+        <h3>
+            Summary
+        </h3>
+        <ul>
+            <li>a practice for wc</li>
+            <li>2 ways for defining ce</li>
+            <li>cpt attributes</li>
+            <li>cpt properties</li>
+            <li>cpt in the shadow DOM</li>
+        </ul>
+        <ul></ul>
+        <a href="~/components/src/ComponentScaffold/component-scaffold.html">~/components/src/ComponentScaffold/component-scaffold.html</a>
+    </section>
+
+    @* ************************** *@
+    <hr />
+    <h1>mash-grid : START </h1>
+    <br />
+    <a href="~/components/source-ts/mash-grid/mash-grid.html">TYPESCRIPT :: ~/components/source-ts/mash-grid/mash-grid.html</a>
+<hr />
+
+    <a href="~/components/source-babel/mash-grid/mash-grid.html">BABEL :: ~/components/source-babel/mash-grid/mash-grid.html</a>
+
+    <h1>mash-grid : END </h1>
+    <hr />
+    @* ___________________________*@
+
+
+
+
+
+
+
+    <h2>
+        Star Rating
+    </h2>
+    <section>
+        <h3></h3>
+        <ul>
+            <li>based on native elements</li>
+            <li>shadow dom styling</li>
+            <li>handle multiple attibutes</li>
+            <li>emit events from web commponent</li>
+        </ul>
+
+        Star Rating
+        <ul>
+            <li>markup attribute for value=2, to set an initial value</li>
+            <li>hover to select a star </li>
+            <li>disabled state, to display readonly data</li>
+            <li>property to set $star.value, for js </li>
+            <li>property to to get $star.value, for js </li>
+        </ul>
+
+        Star
+        <ul>
+            <li>simple nukber input with plussed ui</li>
+            <li>number input, aatributes?, user changes?, properties? ; events and when? </li>
+        </ul>
+
+        <br />
+        For disabled :
+        <ul>
+            <li>css to prevent hover and change cursor </li>
+            <li>private variable to keep track of state</li>
+            <li>watch attribute changes for when the element should be disabled</li>
+        </ul>
+
+        <br />
+        Value Property :
+        <ul>
+            <li>private value property</li>
+            <li>sett and getter</li>
+            <li>render method for digester out</li>
+        </ul>
+
+        <br />
+        User interation :
+        <ul>
+            <li>allow user to make a selection </li>
+            <li>update the component value</li>
+            <li>dispatch changed event</li>
+        </ul>
+
+        <br />
+        Value Attribute :
+        <ul>
+            <li>observe changes to the value attr</li>
+            <li>update cpt value</li>
+            <li>match behaviour of the vlaue input</li>
+        </ul>
+        <a href="~/components/source/StarRating/StarRatingClient.html">~/components/source/StarRating/StarRatingClient.html</a>
+    </section>
+
+    <h2>
+        Slide Menu Rating
+    </h2>
+    <section>
+
+        <h3>Slide Menu Setup</h3>
+        <ul>
+            <li>creat cpt class</li>
+            <li>add initial template</li>
+            <li>add template css, inlcude slide in animation</li>
+        </ul>
+
+        <h3>Use cpt-x theme="red" on the cpt :host([theme="red"]) to bypass scripting </h3>
+        <ul>
+            <li>creat cpt class</li>
+        </ul>
+
+        <h3>Open and Close the mene , use open property </h3>
+        <ul>
+            <li>open property</li>
+            <li>close when the close-button or click the backdrop </li>
+            <li>add css to allow the backdrop to be disabled </li>
+        </ul>
+
+        <h3>
+            Slot for the menu content and thr menu title
+        </h3>
+        <ul>
+            <li>add some defaut style for the menu content</li>
+            <li>add default text for the menu title slot</li>
+            <li>http://caniuse.com/#feat=css-variables</li>
+        </ul>
+
+        <a href="~/components/source/SlideMenu/SlideMenuClient.html">
+            ~/components/source/SlideMenu/SlideMenuClient.html
+        </a>
+    </section>
+
+    <h2>
+        Styling Web Components
+    </h2>
+    <section>
+
+        <h3> CSS Custom Properties</h3>
+        <ul>
+            <li>create style api for star rating </li>
+            <li>style api for slide out menu</li>
+            <li>css @@apply mixins</li>
+        </ul>
+
+        <h3>CSS Custom Properties </h3>
+        <ul>
+            <li>intro</li>
+            <li>browser support</li>
+        </ul>
+        <a href="~/components/source/CSSCustomProperties/CSSCustomProprties.html">~/components/source/CSSCustomProperties/CSSCustomProprties.html</a>
+
+        @*------------------*@
+        <h3>
+            Add Styling API to Star rating
+        </h3>
+        <ul>
+            <li>Spec color for the stars</li>
+            <li>add defailt valies with css cutome propeties</li>
+            <li>specify custom propertoes for the cpt to use</li>
+        </ul>
+        <a href="~/components/source/StarRatingWithCSSCustomProperties/StarRatingClient.html">star rating with custom properties :: ~/components/source/StarRatingWithCSSCustomProperties/StarRatingClient.html</a>
+
+        <br />
+        <a href="~/components/source/SlideMenuWithCSSCustomProperties/SlideMenuClient.html">Slide menu with css custom properties ~/components/source/SlideMenuWithCSSCustomProperties/SlideMenuClient.html</a>
+        <br />
+        <h3>
+            css mixins
+        </h3>
+        <ul>
+            <li>
+                So advaanced
+                has polyfill
+
+                css chrome://flags/
+            </li>
+            <li>
+            </li>
+            <li>
+            </li>
+        </ul>
+        <a href="~/components/source/SlideMenuWithCSSMixins/SlideMenuClient.html">~/components/source/SlideMenuWithCSSMixins/SlideMenuClient.html</a>
+    </section>
+
+    <h2>
+        Production Ready Web Components
+    </h2>
+    <ul>
+        <li>Browser support ?</li>
+        <li>Transpiling e.g. with Babel</li>
+        <li>The polyfills : id the different polyfills</li>
+        <li>The limits of the polyfill for the Shadow DOM</li>
+        <li>ShadyCSS polyfill : Style encapsulation ; CSS Custom properties ; @@apply mixin support</li>
+    </ul>
+
+    <section>
+
+        <h3>
+            Browser Native support : See <a href="https://www.webcomponents.org/">https://www.webcomponents.org/, see furyher dowm the page</a>
+            Overrall, can fill gaps with polyfills,
+            But native support is good as well.
+            pretty good.
+            Except HTMLImports, but using pure JS method to write WC means can skirt around this issue.
+
+            <br />
+            With polyfills WC works on all these browsers , see
+            <a href="https://www.polymer-project.org/1.0/docs/browsers">https://www.polymer-project.org/1.0/docs/browsers</a>
+        </h3>
+        <ul>
+            <li>
+                Custom Elements V1 : http://caniuse.com/#feat=custom-elementsv1
+                <br />
+                IE &#9785; :: EDGE &#9785;:: FF &#9785; : Chrome :: Safari :: Opera :: iOS :: Android Browser :: ChromeAndroid ::
+        </ul>
+        <ul>
+            <li>
+                Shadow DOM V1 : http://caniuse.com/#feat=shadowdomv1
+                <br />
+                IE &#9785; :: EDGE &#9785;:: FF &#9785; : Chrome :: Safari :: Opera :: iOS :: Android Browser :: ChromeAndroid ::
+        </ul>
+        <ul>
+            <li>
+                HTML Template support : http://caniuse.com/#search=html%20template
+                <br />
+                IE &#9785; :: EDGE :: FF  : Chrome :: Safari :: Opera :: iOS :: Android Browser :: ChromeAndroid ::
+        </ul>
+        <ul>
+            <li>
+                HTML Imports : http://caniuse.com/#search=html%20imports
+                JUST CHROME!
+                BUT, less important if you choose pure JS method...
+                <br />
+                IE &#9785; :: EDGE &#9785; :: FF &#9785; : Chrome :: Safari &#9785; :: Opera &#9785; :: iOS &#9785; :: Android Browser :: ChromeAndroid ::
+        </ul>
+
+        <h3>
+            Transpiling ::
+            code in ES2015 so can use classes and 'super', arrow funs, template strings, and future proof
+            But transpile back to ES5, to able to reach IE11 back to IE11 (2013).
+            <a href="http://kangax.github.io/compat-table/es5/">see for es5 compat</a>
+            So, convert your WC code to js that is compatible with all major browsers,
+            including IE11.
+            i.e. transpile back to es5.
+        </h3>
+        <ul>
+            <li>can use npm and babel for this, ...</li>
+            <li>install babel</li>
+            <li>use babel to convert to es5</li>
+        </ul>
+
+        <h4>npm Install Babel</h4>
+        <ul>
+            <li>install node and npm</li>
+            <li>>npm init ## for your project, to get package.json file</li>
+            <li>>npm install --save-dev babel-cli babel-preset-es2015 </li>
+            <li>create npm script to transpile </li>
+            <li>add script to packag .json </li>
+            <li>"transpileComponentsBabel": "babel --presets es2015 Wc\\\\\\\\componentsBabel\\\\\\\\source  --out-dir Wc\\componentsBabel\\distBabel"</li>
+            <li>npm run transpile</li>
+            <li>
+            </li>
+        </ul>
+
+        <h3>
+            Intro to the Polyfills
+        </h3>
+        <ul>
+            <li>
+                see
+                <a href="https://www.webcomponents.org/">https://www.webcomponents.org/</a>
+            </li>
+        </ul>
+
+        <h4>
+            WC Polyfills and bundles ::
+            - only run the polyfills in the browsers that are required ;
+            - let the these loaders decide that
+            - They cannot know whether you want to use es2015/es5 code so,
+            you must use a different polyfill for each
+            TRUST THE POLYFILLS TO LOAD
+        </h4>
+        <ul>
+            <li>There are quite a few polyfills, instead use wc helpers to get appropriate polyfills ...</li>
+            <li>See webcomponents-loaders.js : for es2015 browsers, excludes IE11</li>
+            <li>See webcomponents-es5-loaders.js : when js is es5 and for including IE11</li>
+        </ul>
+        <h4>
+            The polyfills
+        </h4>
+        <ul>
+            <li>HTML Imports polyfill : </li>
+            <li>custom elements v1 api :  ther are bugs and limits, need to use nativ-shim</li>
+            <li>
+                ShadyDOM polyfill, NOT a ShadowDOM polyfill :: slotting ,...
+                <br />
+                not a propery hsadow root, but can use
+                For style-encaps ; css custom props ; css@mixins
+                caveat :  need to add additional JS and slightly change cpts
+            </li>
+            <li>
+                Template Polyfill : required by shady css polyfill
+            </li>
+            <li>
+                Generic Polyfills :
+                IE11 does not have array.from
+            </li>
+            <li>
+                end of the story is :
+
+                just include webcomponents-es5-loader.js
+            </li>
+        </ul>
+
+        <h3>
+            Star-Rating for ALL Browsers including IE11 :
+            - transpile to es5
+            - add polyfills for the WC specs
+        </h3>
+        <ul>
+            <li>bower install web components</li>
+            <li>add webcomponents0es5-loader.js</li>
+            <li>update client HTML to us es5 code</li>
+        </ul>
+
+        <br />
+        <a
+            href="/components/source-ts/StarRatingFinal/star-rating-final.html">
+            STAR-RATING-FINAL :: 
+            /components/source-ts/StarRatingFinal/star-rating-final.html
+        </a>
+
+    </section>
+
+
+
+
+
+
+    <hr />
+    <a href="https://dmitriid.com/blog/2017/03/the-broken-promise-of-web-components/">
+        Leader of the opposition
+    </a>
+    <br />
+    <a href="https://robdodson.me/regarding-the-broken-promise-of-web-components/">Rhe reply</a>
+    <br />
+    <a href="http://2ality.com/2015/08/web-component-status.html">http://2ality.com/2015/08/web-component-status.html</a>
+
+    
+    
+
+</body>
+</html>

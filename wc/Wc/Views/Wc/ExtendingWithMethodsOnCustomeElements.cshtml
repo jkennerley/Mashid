@@ -1,0 +1,45 @@
+﻿@{Layout = null;}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script>
+
+        //
+        class DivisionElement extends HTMLElement {
+            constructor() {
+                super();
+                console.log("CE.ctor");
+            }
+            divideByTen(v) {
+                console.log( parseInt(v) / 10);
+            }
+        }
+
+        //
+        class MultiplyElement extends HTMLElement {
+            constructor() {
+                super();
+                console.log("CE.ctor");
+            }
+            mulByTen(v) {
+                console.log( parseInt(v) * 10);
+            }
+        }
+
+        window.customElements.define("division-element", DivisionElement);
+        window.customElements.define("multiply-element", MultiplyElement );
+
+    </script>
+
+</head>
+<body>
+    
+    division-element : <division-element></division-element>
+    <hr />    
+
+    MultiplyElement : <multiply-element></multiply-element>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "Wc",
+  "authors": [
+    "John Kennerley <john@totalaoc.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "document-register-element": "^1.5.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.1",
+    "ag-grid": "^10.0.1"
+  }
+}

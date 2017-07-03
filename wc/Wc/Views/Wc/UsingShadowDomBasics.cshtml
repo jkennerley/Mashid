@@ -1,0 +1,75 @@
+﻿@{Layout = null;}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UsingShadowDomBasics</title>
+
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li>add shadow root to the element</li>
+        <li>interacting with the shadow DOM</li>
+        <li>shadow DOM in action, see how the encapsulation works</li>
+    </ul>
+
+    <br />
+    <p>using shadow DOM basics</p>
+    <div id="simple-div"></div>
+    <p>using shadow DOM basics</p>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+
+            // demo : shadow-dom
+            // 
+
+            // can now encapsulate html/style i.e. properly componentised markup and style
+            //  styles from the shadow, only effect inside the shadow dom
+            //  style inside the shadow dom dont leak out and effect outside the shadow
+
+            // outside style does not breakm the component
+            // the component style does not break the host
+
+            // get an element, attach some shadow dom,
+            let $div = document.getElementById("simple-div");
+
+            if ($div) {
+
+                //
+                // with this should be able to see #shadow-root in chrome
+                // see [Developer Tools][Settings[Show user agent shadow DOM]
+                // open mode will mode can manipualte the shadow root ...
+                $div.attachShadow({ mode: "open" });
+
+                // now add some stuff to the shadow root
+                // this will style any para in the shadow-root 
+                // and not leak outside to style the container 
+                // any p style of the container will not leak in to the component
+                $div.shadowRoot.innerHTML = `
+                        <style>
+                            pa { 
+                                color: blue;
+                            }
+                        </style>
+                        <p>is from the shadow</p>
+                    `
+                    ;
+            }
+            else {
+                console.log("$div not found");
+            }
+
+        });
+    </script>
+</body>
+</html>

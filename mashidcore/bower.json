@@ -1,0 +1,24 @@
+{
+  "name": "Mashid",
+  "homepage": "https://github.com/jkennerley/Mashid",
+  "authors": [
+    "johnkennerley <john.kennerley@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
+    "polymer": "Polymer/polymer#2.0.1"
+  },
+  "devDependencies": {
+    "bootstrap": "4.0.0-alpha.6"
+  }
+}

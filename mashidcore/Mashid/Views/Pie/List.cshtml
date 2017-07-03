@@ -1,0 +1,32 @@
+﻿@using System.Runtime.InteropServices
+
+@model PiesListViewModel
+
+@{this.Layout = "_LayoutPie";}
+
+@ViewBag.CurrentCategory
+
+@foreach (var pie in Model.Pies)
+{
+    @* html-partial-view 
+        are like web-forms controls, 
+        are replaced by by tag-helpers 
+        Limitation, is that if extra other data,
+        create view paetil view with bigger model
+
+    Hence => view-components
+         1. crete class deries from ViewComponent
+         2. [ViewComponent] attribute
+         3. create class with name that ends with ViewComponent
+    will have public IViewComponentResult invoke(){ return View(model) ;} method 
+    It is not strictly necessary the viewComponent has a view, it may return string which is then inserted
+    but can have a cshtml
+    Typicall found in /Shared/Components
+        
+    *@
+    @Html.Partial( "PieOverviewSummary" , pie)
+
+
+
+
+}

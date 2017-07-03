@@ -1,0 +1,41 @@
+﻿@{Layout = null;}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UsingHtmlImports</title>
+
+    <!-- the id is so that it can be referenced later in JS -->
+    <link rel="import" href="/component/notice.html" id="notice" />
+
+</head>
+
+<body>
+    in this file link-rel-import another file, notice.html
+
+    <script>
+        // get the content of the import    
+        const $link = document.getElementById("notice");
+
+        const $content = $link.import.querySelector(".notice-frame");
+
+        const $clone = $content.cloneNode(true);
+        document.body.appendChild($clone);
+        document.body.appendChild($clone);
+
+        const $clone2 = $content.cloneNode(true);
+        document.body.appendChild($clone);
+        document.body.appendChild($clone2);
+
+        const $clone3 = $content.cloneNode(true);
+        document.body.appendChild($clone);
+        document.body.appendChild($clone2);
+        document.body.appendChild($clone3);
+
+
+    </script>
+
+</body>
+</html>

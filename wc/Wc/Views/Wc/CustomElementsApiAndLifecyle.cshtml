@@ -1,0 +1,55 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script>
+
+        class MyCustomElement extends HTMLElement {
+
+            constructor() {
+                super();
+
+                console.log("CustomElement.ctor for the custom element");
+            }
+
+            connectedCallback() {
+                console.log("CustomElement.connectedCallback, connected to the dom");
+            }
+
+            static get observedAttributes() {
+                return ["demo"];
+            }
+
+            attributeChangedCallback(name, oldValue, newValue) {
+                console.log("CustomElement.attibuteChangedCalback, attribute has been changed ...");
+
+                console.log(oldValue, newValue);
+            }
+
+            disconnectedCallback() {
+                console.log("MyCustomeElement.disconnectedCallback, disconnected from the dom");
+            }
+
+        }
+
+        window.customElements.define("my-custom-element", MyCustomElement);
+    </script>
+</head>
+
+<body>
+
+<script>
+
+    let $ce = document.createElement("my-custom-element");
+
+    setTimeout(() => {
+        document.body.appendChild($ce);
+    }, 3000);
+</script>
+</body>
+</html>

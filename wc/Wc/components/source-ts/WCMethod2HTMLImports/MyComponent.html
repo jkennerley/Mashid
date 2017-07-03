@@ -1,0 +1,78 @@
+﻿<!--
+    - The template goes on the shadow DOM and is not rendered 
+    - the file that does a link-rel-import of this file, immediately after the link-rel-import...
+    - #document>html>head>template>#document-fragment> style + p  
+-->
+<template>
+
+    <!--this style will be in the shadow DOM -->
+    <style>
+        p {
+            color:red;
+        }
+    </style>
+
+    <p>
+        My Web Component.
+        <br />
+        This should be styled red, 
+        because there is a style with the component, 
+        that is local to the component. 
+        <br />
+
+    </p>
+
+</template>
+
+<script>
+
+    // The HTML/CSS is defined in the template tag
+    // Step 1 : Get the $template, by using the owner document 
+    // Step 2 : Inside a instanced component connectedCallback, get the template using the above code lines
+    // Step 3 : clone the template using document.importNode
+    // Step 4 : given the clone, add the clone to with append child
+    // ... we have class called MyComponent, tht inherits from HTMLElement, 
+    // Step 5 : associate the class with tag name using window.customElements.define()
+
+    // Step1 : store a reference to the owner document of this script
+    // create the custom element
+    // Store reference the owner document of this script,
+    // You could try
+    // ... const $ownerDocument = document.currentScript.ownerDocument;
+    // BUT, document.currentScript may need a polyfill e.g. if browser not {Chrome|Opera}
+    // ... HENCE use polyfill for html import , 
+    // This gets the property document._currentScript property, not eht underscore
+    // See https://www.webcomponents.org/polyfills#html-imports-polyfill
+
+    // so we can the template element we just created
+    // At time of writing html import spec is only in Chrome
+    // So for other browsers need html-import polyfill
+    // see web components js suite of polyfills
+    // https://developer.mozilla.org/en-US/docs/Web/API/Document/currentScript
+    // bower install --save webcomponents/webcomponentsjs, to get document._currentScript 
+
+    // get the owner document
+    const $ownerDocument = (document._currentScript || document.currentScript).ownerDocument;
+    // get the template ,form the owner document of this script
+    $template = $ownerDocument.querySelector("template");
+
+    // we have template from the shadow dom
+    // when component will be instanced and then put inot the dom
+    // when it is put into the dom, get the template and use that
+    class MyComponent extends HTMLElement {
+
+        connectedCallback() {
+            // copy contents of template. https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode
+            const $templateClone = document.importNode($template.content, true);
+            // this is a html element, add markup children
+            // i.e. the elements of the cloned template
+            this.appendChild($templateClone);
+        }
+    }
+
+    // the window needs to know about the cutom element,
+    // link the my-component tag to the class MyComponent
+    window.customElements.define("my-component", MyComponent);
+
+</script>
+

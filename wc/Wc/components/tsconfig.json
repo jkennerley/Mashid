@@ -1,0 +1,17 @@
+﻿{
+    "compileOnSave": true,
+    "include": [ "source-ts/**/*" ],
+    "compilerOptions": {
+        "outDir": "dist-ts",
+        "target": "es5",
+        "allowJs": true,
+        "sourceMap": true,
+        "declaration": false,
+        "allowUnreachableCode": false,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "newLine": "CRLF",
+        "removeComments": true,
+        "module": "system"
+    }
+}

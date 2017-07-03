@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- link rel import int he web component -->
+    <link rel="import" href="MyComponent.html" />
+</head>
+<body>
+    <!-- client usage of the web component -->
+    my-component START :
+    <my-component></my-component>
+    <br />
+    <p>
+        my-component END :
+        <br />
+        This is in a p element,
+        The web component template, 
+        is taken out of the HTML import, 
+        and cloned 
+        and put back into the light-DOM,
+        Since the template contains a style, that style will be appended, 
+        and so that style will infect the page style, 
+        Hence, the p style from the template, 
+        will effect the whole page style
+
+    </p>
+
+    <h3>
+        Wen Components : The HTML Import Way
+    </h3>
+
+
+
+
+
+    <ul>
+        <li>
+            link-rel-import the HTML containing the WC
+        </li>
+        <li>
+            Add tag to the page that uses the web-component
+        </li>
+    </ul>
+</body>
+</html>

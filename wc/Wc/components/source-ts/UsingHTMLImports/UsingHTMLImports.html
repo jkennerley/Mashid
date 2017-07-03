@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UsingHtmlImports</title>
+
+    <!-- the id is so that it can be referenced later in JS getElementById -->
+    <link rel="import" href="notice.html" id="notice" />
+</head>
+
+<body>
+    <ul>
+        <li>
+            This file has a link-rel-import to notice.html
+        </li>
+        <li>
+            The js on the page gets the $content of the import file with querySelector
+        </li>
+        <li>
+            The $content of the import file is then cloned,
+        </li>
+        <li>
+            The cloned is then appended to the body
+        </li>
+    </ul>
+
+    <script>
+
+        const $import = document.getElementById("notice");
+
+        const $content = $import.import.querySelector("#notice");
+        console.log($content);
+
+        let $clone = $content.cloneNode(true);
+    </script>
+</body>
+</html>

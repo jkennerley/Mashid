@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wc", "Wc\Wc.csproj", "{D01C6FF8-037F-439B-A98F-EB9B18B31512}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wc.Tests", "Wc.Tests\Wc.Tests.csproj", "{CDBF7233-A30C-46A1-9703-5D80AFA35408}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{3E1798D9-C2D4-43B5-A162-5E32107F1C76}"
+	ProjectSection(SolutionItems) = preProject
+		bower.json = bower.json
+		package.json = package.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D01C6FF8-037F-439B-A98F-EB9B18B31512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D01C6FF8-037F-439B-A98F-EB9B18B31512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D01C6FF8-037F-439B-A98F-EB9B18B31512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D01C6FF8-037F-439B-A98F-EB9B18B31512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDBF7233-A30C-46A1-9703-5D80AFA35408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDBF7233-A30C-46A1-9703-5D80AFA35408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDBF7233-A30C-46A1-9703-5D80AFA35408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDBF7233-A30C-46A1-9703-5D80AFA35408}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

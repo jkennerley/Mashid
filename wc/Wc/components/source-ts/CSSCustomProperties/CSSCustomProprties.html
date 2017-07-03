@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            --primary-color: #a6d785;
+            --secondary-color: #999;
+            --border-color : #6d9350;
+        }
+        .container {
+            width: 250px;
+            margin: 0px auto;
+            background-color: grey;
+               text-align:center;
+        }
+        .box {
+            background-color: red;
+            width  : 100px;
+            height : 100px;
+            border : solid 1px #ccc;
+            box-sizing:border-box;
+            display:inline-block;
+        }
+        .one, .four {
+            background-color: var(--primary-color);
+            border-color: var(--border-color);
+        }
+
+        .two, .three {
+            background-color: var(--secondary-color);
+            border-color: var(--border-color);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="box one">1</span>
+        <span class="box two">2</span>
+        <span class="box three">3</span>
+        <span class="box four">4</span>
+    </div>
+</body>
+</html>

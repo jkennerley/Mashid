@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="star-rating.js"></script>
+
+</head>
+
+<body>
+    Star Rating
+    <mtk-star-rating id="sr" class="sr"></mtk-star-rating>
+
+
+    <br />
+    <!--
+    <mtk-star-rating  id="sr"  disabled  ></mtk-star-rating>
+    <mtk-star-rating id="sr" value="3" ></mtk-star-rating>
+    -->
+
+    <script>
+            //debugger;
+            var $a = document.querySelector("#sr");
+            console.log($a);
+            $a.addEventListener("change", () => {
+                console.log("change!");
+            });
+    </script>
+
+</body>
+</html>

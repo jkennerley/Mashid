@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="mtk-slide-menu.js"></script>
+    <title></title>
+
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .controls {
+            width: 400px;
+            margin: auto;
+            background-color: #F1F1F1;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 1px 1px rgba(51, 51, 51, 0.50);
+        }
+
+            .controls .btn {
+                font-family: inherit;
+                font-size: 100%;
+                padding: .5em 1em;
+                color: #CCC;
+                border: 1px solid #000;
+                background-color: #333;
+                text-decoration: none;
+                border-radius: 2px;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+
+        mtk-slide-menu {
+            /*
+
+            --menu-width: 25%;
+            --title-size: 2em;
+            --title-background-color: pink;
+            --title-color: yellow;
+            --menu-bg-col: #ff6a00;
+            */
+        }
+    </style>
+</head>
+
+<body>
+
+    <mtk-slide-menu id="menu">
+        <!--
+        styled by the host,
+        thee stay in the light dom
+        but you can some default style in the compenet ...
+        use css psude selector .content-slot::slotted(a)
+
+        user preference style witll always take prefreence of cpt style
+        -->
+
+        <h3 slot="title">Nav Menu</h3>
+        <a href="#">One</a>
+        <a href="#">Two</a>
+        <a href="#">Three</a>
+    </mtk-slide-menu>
+
+    <!--
+    -->
+    <div class="controls">
+        <button class="btn" data-action="open">Open Menu</button>
+        <button class="btn" data-action="close">Close Menu</button>
+    </div>
+
+    <script>
+
+        const $controls = document.querySelector(".controls");
+
+        const $menu = document.getElementById("menu");
+
+        $controls.addEventListener("click", (event) => {
+            switch (event.target.dataset.action) {
+                case "open":
+                    $menu.open = true;
+                    break;
+                case "close":
+                    $menu.open = false;
+                    break;
+            }
+        });
+
+        // the cpt raises events for open and close
+        $menu.addEventListener("menu-opened", (event) => {
+            console.log("MENU OPENED!", event);
+        });
+        $menu.addEventListener("menu-closed", (event) => {
+            console.log("MENU CLOSED!", event);
+        });
+    </script>
+</body>
+</html>

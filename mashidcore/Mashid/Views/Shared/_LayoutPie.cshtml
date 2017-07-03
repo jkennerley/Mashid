@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @* recomended W3C/IMC. Encoding is 1-4 bytes, avoids the BOM of UTF-16 & utf-32,  encodes 1,112,064 of UNICODE *@
+    <meta charset="utf-8">
+    @* place as high as possible in the head ; display using highest mode possible relevent for IE9/IE8 *@
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+    @* add the responsive viewport meta tag for boostrap-4 *@
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>mashid</title>
+    @*
+    *@
+    <link rel="stylesheet" href="~/bower_components/bootstrap/dist/css/bootstrap.min.css" >
+    <link href="~/Content/site.css" rel="stylesheet" />
+</head>
+<body>
+
+<div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    @await Component.InvokeAsync("ShoppingCartSummary")
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <p class="lead">
+                    <img class="img-responsive" alt="Bethany's Pie Shop'" src="~/Images/bethanylogo.png" />
+                </p>
+            </div>
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+
+    @*
+    *@
+    <script src="~/bower_components/jquery/dist/jquery.slim.js"></script>
+    <script src="~/bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="~/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</div>
+    
+    
+    
+    
+
+</body>
+</html>

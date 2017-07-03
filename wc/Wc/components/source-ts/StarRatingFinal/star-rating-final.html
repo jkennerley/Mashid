@@ -1,0 +1,43 @@
+﻿ DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="/bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../WebComponentsHelpers/custom-style-interface.min.js"></script>
+    <script src="../WebComponentsHelpers/WebComponentHelpers.js"></script>
+
+    <style class="document-style">
+        html, body {
+            font-size: 1.5em;
+        }
+
+        rw-star-rating {
+            --star-default-color: #333;
+            --star-selected-color: red;
+            --star-hover-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <rw-star-rating></rw-star-rating>
+
+    <script>
+
+        // when web componenents is ready, load the components
+        window.addEventListener("WebComponentsReady", function () {
+
+            // list of necessary web component js files for this page
+            var webComponentJSFiles = ["/components/dist-ts/StarRatingFinal/rw-star-rating.js"];
+
+            // load up the necessary web component js files
+            webComponentJSFiles.forEach(function (f) { WebComponentHelper.load(f); });
+        });
+
+        // add the style on this page, to the shadydom styles
+        WebComponentHelper.addTheStyleOnPageToTheShadyDomStyles("style.document-style");
+
+    </script>
+</body>
+</html>

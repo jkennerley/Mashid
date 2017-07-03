@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @* extend native custom elements, including chrome
+    *@
+    <script src="~/bower_components/document-register-element/build/document-register-element.js"></script>
+
+    <script>
+
+        class CustomAnchor extends HTMLAnchorElement {
+
+            // when the an instance become conneected to the dom ...
+            connectedCallback() {
+
+                // to this $element, add an click event listener, 
+                this.addEventListener('click', e => {
+                    e.preventDefault(); // prevent default action of the event
+                    const result = confirm("Sure ?");
+                    if (result) {
+                        window.location.href = e.target.href;
+                    }
+                });
+            }
+        }
+
+        // register "custom-anchor" which has prototyp CustomAnchor class ,  
+        // also since extending native element must specify which tag is being extended ie <a>
+        window.customElements.define("custom-anchor", CustomAnchor, { extends: "a" });
+
+    </script>
+
+</head>
+<body>
+
+    @* tell the link to implement this extensio is is=... *@
+    <a is="custom-anchor" href="http://bbc.co.uk">bbc</a>
+
+</body>
+</html>
+

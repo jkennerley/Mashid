@@ -1,0 +1,33 @@
+﻿@{Layout = null;}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>WCMethod1JS</title>
+    
+    <script src="~/components/source-ts/WCMethod1JS/my-component.js"></script>
+
+
+</head>
+<body>
+
+
+    Method 1 : web components by pure js
+    <br />
+
+    appdraw : 
+    <appdraw-component></appdraw-component>
+
+    <p>
+        a p-tag that will be styled as a p tag ...
+        If the component is contributing style,
+        and that style includes a p tag styling,
+        then this p that is outside of the component will
+        by styled by the component styling, 
+        hence break encapsaulation ...
+        Hence, need to use shadow DOM....
+
+    </p>
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>WCMethod1JS</title>
+
+    <script src="~/components/source-ts/WCMethod1JS/my-component.js"></script>
+</head>
+<body>
+
+    Method 1 : web components by pure js
+    <ul>
+        <li>
+            In my-component.js
+        </li>
+        <li>
+            The is class called AppDrawComponent that inherits from HTMLElement
+        </li>
+        <li>
+            On connecting to the dom, 
+        </li>
+        <li>
+            This class pokes itself with some html
+        </li>
+        <li>
+            The AppDrawComponent class is linked with tag name  appdraw-component
+            , with the call window.curtomElements.define();
+        </li>
+    </ul>
+
+    <br />
+
+    appdraw :
+    <appdraw-component></appdraw-component>
+
+    <ul>
+        <li>
+            a p-tag that will be styled as a p tag ...
+        </li>
+        <li>
+            If the component is contributing style,
+        </li>
+        <li>
+            and that style includes a p tag styling,
+        </li>
+        <li>
+            then this p that is outside of the component will
+        </li>
+        <li>
+            by styled by the component styling,
+        </li>
+        <li>
+            hence break encapsulation ...
+        </li>
+        <li>
+            Hence, need to use shadow DOM....
+        </li>
+    </ul>
+
+    <p>
+    </p>
+</body>
+</html>

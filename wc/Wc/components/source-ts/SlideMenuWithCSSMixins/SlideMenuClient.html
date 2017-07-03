@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="mtk-slide-menu.js"></script>
+
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .controls {
+            width: 400px;
+            margin: auto;
+            background-color: #F1F1F1;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 1px 1px rgba(51, 51, 51, 0.50);
+        }
+
+        .controls .btn {
+            font-family: inherit;
+            font-size: 100%;
+            padding: .5em 1em;
+            color: #CCC;
+            border: 1px solid #000;
+            background-color: #333;
+            text-decoration: none;
+            border-radius: 2px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        /* 
+        send styles through the web component, 
+        this  is where you override the components own default styles
+        have applied style to the cpt, but have had to add individual props for each style
+        we have not been constrained by which props the cpt author has allowed to us to chnage
+        */
+        mtk-slide-menu {
+            /*
+            */
+            --menu-width: 50%;
+            /* a clsss holding some properties t,this os applied with @apply --title-styles ; inside the cpt */
+            --title-styles: {
+                background-color : #6077e7;
+                color :  #b22222;
+                font-size : 1.5em;
+            }
+            /*
+            a less good way of doing the above
+            --title-size: 2em;
+            --title-background-color: pink;
+            --title-color: yellow;
+            --menu-bg-col: #ff6a00;
+            */
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <mtk-slide-menu id="menu">
+        <h3 slot="title">Nav Menu</h3>
+        <a href="#">One</a>
+        <a href="#">Two</a>
+        <a href="#">Three</a>
+    </mtk-slide-menu>
+
+    <!-- -->
+    <div class="controls">
+        <button class="btn" data-action="open">Open Menu</button>
+        <button class="btn" data-action="close">Close Menu</button>
+    </div>
+
+    <br />
+    <a href="chrome://flags/">
+        In chrome you have to turn on Experimental web platform features
+        to get the CSS @apply rule
+        chrome://flags/:: 
+    </a>
+
+
+<script>
+
+        const $controls = document.querySelector(".controls");
+
+        const $menu = document.getElementById("menu");
+
+        $controls.addEventListener("click", (event) => {
+            switch (event.target.dataset.action) {
+                case "open":
+                    $menu.open = true;
+                    break;
+                case "close":
+                    $menu.open = false;
+                    break;
+            }
+        });
+
+        // the cpt raises events for open and close
+        $menu.addEventListener("menu-opened", (event) => {
+            console.log("MENU OPENED!", event);
+        });
+        $menu.addEventListener("menu-closed", (event) => {
+            console.log("MENU CLOSED!", event);
+        });
+    </script>
+</body>
+</html>

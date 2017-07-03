@@ -1,0 +1,67 @@
+﻿@{Layout = null;}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UsingHtmlTemplates</title>
+</head>
+<body>
+
+    @* the template, not rendered *@
+    <template id="movie-template">
+        <li>
+            <h4>title</h4>
+            <p>plot</p>
+        </li>
+    </template>
+
+    <template id="movie-table-template">
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
+    @* container, used to render li-template*@
+    <ul id="movies"></ul>
+
+    @* container, used to render tr-template*@
+    <table id="movies-table" border="1"></table>
+
+    <script>
+
+        //  html ul-li
+        const movies = [
+            { title: "movie-1", plot: 'The quick brown fox...' },
+            { title: "movie-2", plot: 'The quick brown fox...' }
+        ];
+
+        // demo 1 
+        //  li- template
+        const $template = document.getElementById("movie-template");
+        // target container, for li-template
+        const $movies = document.getElementById("movies");
+        // fe movie model item, clone li template, set values, append to dom
+        movies.forEach((m) => {
+            let $clone = document.importNode($template.content, true);
+            $clone.querySelector("h4").innerText = m.title;
+            $clone.querySelector("p").innerText = m.plot;
+            $movies.appendChild($clone);
+        });
+
+        // demo 2
+        //  html table template
+        const $movieTableTemplate = document.getElementById("movie-table-template");
+        const $moviesTable = document.getElementById("movies-table");
+        // fe movie model item, clone tr-template, set values, append to dom
+        movies.forEach((m) => {
+            let $clone = document.importNode($movieTableTemplate.content, true);
+            $clone.querySelectorAll("td")[0].innerText = m.title;
+            $clone.querySelectorAll("td")[1].innerText = m.plot;
+            $movies.appendChild($clone);
+        });
+
+    </script>
+</body>
+</html>
