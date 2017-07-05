@@ -312,7 +312,6 @@
     <Content Include="components\source-ts\CSSCustomProperties\CSSCustomProprties.html" />
     <Content Include="components\source-ts\CustomElementsApiAndLifecycle\vanilla-hw.html" />
     <Content Include="components\source-ts\CustomElementsApiAndLifecycle\vanilla-hw.js" />
-    <Content Include="components\source-ts\mash-grid\ava-foo.js" />
     <Content Include="components\source-ts\mash-grid\mash-grid.html" />
     <Content Include="components\source-ts\mash-grid\mash-grid.js" />
     <Content Include="components\source-ts\WebComponentAttributes\random-quote-attributes-component.js" />
