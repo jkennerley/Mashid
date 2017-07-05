@@ -9,9 +9,6 @@
     "ts-transpile-watch": "tsc -p WC/components/tsconfig.json -w",
     "-x-babel-transpile": "babel --presets es2015 TotalAoc.Centrik/components/source-babel  --out-dir TotalAoc.Centrik/components/dist-babel",
     "babel-transpile": "babel --presets es2015 WC/components/source-babel  --out-dir WC/components/dist-babel ",
-    "ava-test-0": "ava Wc.TestsJs/**/*.UnitTest.js",
-    "ava-test": "ava --verbose",
-    "ava-test-watch": "ava --verbose --watch"
   },
   "author": "",
   "license": "ISC",
@@ -29,14 +26,6 @@
     ],
     "ProjectOpened": [
       "install"
-    ]
-  },
-  "ava": {
-    "files": [
-      "Wc.TestsJs/**/*.UnitTest.js"
-    ],
-    "source": [
-      "Wc.TestsJs/**/*.src.js"
     ]
   }
 }
