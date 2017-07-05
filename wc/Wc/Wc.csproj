@@ -432,9 +432,9 @@
     <Content Include="components\dist-ts\__tobemoved\random-quote-component.js.map" />
     <Content Include="components\dist-ts\__tobemoved\x.js.map" />
     <Content Include="components\dist-ts\CustomElementsApiAndLifecycle\vanilla-hw.js.map" />
-    <Content Include="components\source-ts\mash-grid\json2.json" />
     <Content Include="components\source-babel\mash-grid\perf1.json" />
     <Content Include="components\source-ts\mash-grid\json1.json" />
+    <Content Include="components\source-ts\mash-grid\LICENSE" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -474,6 +474,7 @@
     <Content Include="Views\Aggrid\example2.cshtml" />
     <Content Include="Views\Wc\StarRating.cshtml" />
     <Content Include="Views\Wc\SlideMenu.cshtml" />
+    <Content Include="Views\Home\IndexOriginal.cshtml" />
     <None Include="web.jkl.config" />
     <None Include="web.TOTALAOC-JOHN.config" />
   </ItemGroup>

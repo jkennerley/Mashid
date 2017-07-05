@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{3E1798D9-C2D4-43B5-A162-5E32107F1C76}"
 	ProjectSection(SolutionItems) = preProject
 		bower.json = bower.json
+		..\LICENSE = ..\LICENSE
 		package.json = package.json
 	EndProjectSection
 EndProject

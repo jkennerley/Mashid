@@ -178,14 +178,14 @@ class MashGrid extends HTMLElement {
         }
 
         // sort click event listeners for each of the headings
-        let $ths = this._root.querySelectorAll("th");
+        const $ths = this._root.querySelectorAll("th");
         $ths.forEach(($th) => {
             $th.addEventListener("click", (event) => {
                 this._onSortEvent({ "propertyName": event.target.innerText, "ctrlKey": event.ctrlKey });
             });
         });
 
-        let $tds = this._root.querySelectorAll("td");
+        const $tds = this._root.querySelectorAll("td");
 
         $tds.forEach(($td) => {
             $td.addEventListener("dblclick", (event) => {
@@ -243,7 +243,6 @@ class MashGrid extends HTMLElement {
     }
 
     _getComparator(propertyName, sortOrder) {
-
         const stringComparator = (l, r) => {
             let ret = 0;
 
@@ -273,8 +272,8 @@ class MashGrid extends HTMLElement {
             let left = l[propertyName];
             let right = r[propertyName];
 
-            let typeofLeft = typeof left;
-            let typeofRight = typeof right;
+            const typeofLeft = typeof left;
+            const typeofRight = typeof right;
 
             if (typeofLeft !== typeofRight) {
                 left = (left == null) ? "null" : left;
@@ -366,10 +365,10 @@ class MashGrid extends HTMLElement {
                 {
                     if (msg.option === "set") {
                         // get the xs, that will be filtered filter
-                        let ys = this._model.grids[0].xs;
+                        const ys = this._model.grids[0].xs;
 
                         // apply the filter
-                        var ysFiltered = ys.filter(function (y) {
+                        const ysFiltered = ys.filter(function (y) {
                             const propertyValue = y[msg.propertyName];
                             const found = propertyValue.indexOf(msg.filterValue);
                             const ret = (found > -1) ? true : false;
