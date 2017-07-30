@@ -13,5 +13,18 @@ namespace Wc.Controllers
         {
             return View();
         }
+
+
+        public ActionResult PolymerSkeletonEvergreenAndIE11()
+        {
+            return View();
+        }
+
+
+
+        
+
+
+
     }
 }
