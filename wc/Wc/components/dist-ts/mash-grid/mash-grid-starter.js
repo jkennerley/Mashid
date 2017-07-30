@@ -8,17 +8,6 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var adder = function (a, b) {
-    return a + b;
-};
-var Widget = (function () {
-    function Widget() {
-    }
-    Widget.prototype.foo = function () {
-        return 2;
-    };
-    return Widget;
-}());
 var MashGrid = (function (_super) {
     __extends(MashGrid, _super);
     function MashGrid() {
@@ -26,4 +15,5 @@ var MashGrid = (function (_super) {
     }
     return MashGrid;
 }(HTMLElement));
+window.customElements.define("mash-grid", MashGrid);
 //# sourceMappingURL=mash-grid-starter.js.map

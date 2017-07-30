@@ -16,5 +16,8 @@
   ],
   "dependencies": {
     "document-register-element": "^1.5.0"
+  },
+  "devDependencies": {
+    "power-assert": "^1.4.4"
   }
 }

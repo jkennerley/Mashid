@@ -313,6 +313,7 @@
     <Content Include="components\source-ts\CSSCustomProperties\CSSCustomProprties.html" />
     <Content Include="components\source-ts\CustomElementsApiAndLifecycle\vanilla-hw.html" />
     <Content Include="components\source-ts\CustomElementsApiAndLifecycle\vanilla-hw.js" />
+    <Content Include="components\source-ts\mash-grid\mash-grid.UnitTest.html" />
     <Content Include="components\source-ts\mash-grid\mash-grid-starter.js" />
     <Content Include="components\source-ts\mash-grid\mash-grid.html" />
     <Content Include="components\source-ts\mash-grid\mash-grid.js" />

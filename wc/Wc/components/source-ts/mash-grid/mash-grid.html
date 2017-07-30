@@ -6,80 +6,17 @@
     <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../WebComponentsHelpers/custom-style-interface.min.js"></script>
     <script src="../WebComponentsHelpers/WebComponentHelpers.js"></script>
-    <style class="document-style">
-    /*
-        html, body {
-            font-size: 1.5em;
-        }
-
-        mash-grid {
-            --star-default-color: #333;
-            --star-selected-color: red;
-            --star-hover-color: blue;
-        }
-    */
-    </style>
+    <style class="document-style"></style>
 </head>
 
 <body>
-
-    <!--
-
-    <mash-grid id="mashgrid" config="{}"></mash-grid>
-
-    <mash-grid id="mashgrid" config='{"data" : "stub", "stubRows":5, "stubCols":3 }'></mash-grid>
-
-    <template id="table-template">
-        <table data-mash="forEachOf: model">
-            <tr>
-                <td data-mash="text : c0"></td>
-                <td data-mash="text : c1"></td>
-            </tr>
-        </table>
-    </template>
-
-    <template id="tr-template">
-        <tr>
-            <td data-mash="text : c0"></td>
-            <td data-mash="text : c1"></td>
-        </tr>
-    </template>
-
-    <mash-grid id="mashgrid" config='{"data" : "stub", "stubRows":5, "stubCols":3 }'>
-    </mash-grid>
-    <mash-grid id="mashgrid" config='{"data" : "stub", "stubRows":1000, "stubCols":51 }'></mash-grid>
-
-    <template id="tr-template">
-        <tr>
-            <td data-mash="text : c0"></td>
-            <td data-mash="text : c1"></td>
-        </tr>
-    </template>
-    <mash-grid id="mashgrid" config='{"data" : "stub", "stubRows":1000, "stubCols":12 }'></mash-grid>
-
-    <mash-grid id="mashgrid" config='{"data" : "./perf1.json"}'></mash-grid>
-
-    <hr />
-    -->
     <mash-grid id="mashgrid" config='{"url" : "./json1.json"}'></mash-grid>
-    
-    
-    <!--
-    <mash-grid id="mashgrid" config='{"url" : "./json1.json"}'></mash-grid>
-    -->
 
-    
-    
-    
-
-<script>
-
-        //var source = "source-ts" ;
-        var source = "dist-ts" ; 
+    <script>
 
         // web-components-polyfills ready, now load the list of web components
         window.addEventListener("WebComponentsReady", function () {
-            ["../../" + source + "/mash-grid/mash-grid.js"].forEach(function (javaScriptFile) { WebComponentHelper.load(javaScriptFile); });
+            ["../../" + "dist-ts" + "/mash-grid/mash-grid.js"].forEach(function (javaScriptFile) { WebComponentHelper.load(javaScriptFile); });
         });
         // add the style on this page, to the shady-dom
         WebComponentHelper.addTheStyleOnPageToTheShadyDomStyles("style.document-style");

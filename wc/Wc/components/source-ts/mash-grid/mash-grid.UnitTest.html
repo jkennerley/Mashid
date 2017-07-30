@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="/bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../WebComponentsHelpers/custom-style-interface.min.js"></script>
+    <script src="../WebComponentsHelpers/WebComponentHelpers.js"></script>
+    <style class="document-style"></style>
+</head>
+
+<body>
+
+    <!---->
+    <div id="mocha"> </div>
+    <link rel="stylesheet" href="/node_modules/mocha/mocha.css">
+    <script src="/node_modules/mocha/mocha.js"></script>
+    <script src="/node_modules/chai/chai.js"></script>
+    <script>
+        mocha.setup('bdd')
+    </script>
+    <!---->
+
+    <script>
+
+        var assert = chai.assert;
+
+        describe('mash-grid', function () {
+
+            it('document.getElementById("mashgrid") should return dom element', function () {
+                // Arrange
+                // Act
+                // Assert
+                var $e = document.getElementById("mashgrid");
+                //console.log($e);
+                //console.log(typeof $e);
+                //assert.typeOf($e, 'object')
+                //debugger;
+                assert($e);
+            });
+
+            it('chai demo ', function () {
+                // Arrange
+                // Act
+                // Assert
+
+                // red fail
+                //assert(undefined);
+                //assert(null);
+                //assert(0);
+                //assert.fail(0,1, "demo chai assert.fail")
+                //assert.isOk(0, "demo chai ")
+
+                // green
+                assert({});
+                assert.isOk({}, "demo chai isOK")
+                assert.isNotOk(null, "demo chai assert.isNotOk")
+                assert.equal(1, 1, "demo chai assert.isOk");
+                assert.notEqual("actual","expected", "demo chai assert.isNotOk");
+            });
+
+        });
+
+    </script>
+
+    <script>
+
+        // web-components-polyfills ready, now load the list of web components
+        window.addEventListener("WebComponentsReady", function () {
+            ["../../" + "dist-ts" + "/mash-grid/mash-grid.js"].forEach(function (javaScriptFile) { WebComponentHelper.load(javaScriptFile); });
+        });
+        // add the style on this page, to the shady-dom
+        WebComponentHelper.addTheStyleOnPageToTheShadyDomStyles("style.document-style");
+
+        let mochaRet = mocha.run();
+
+        console.log(mochaRet);
+    </script>
+
+    <mash-grid id="mashgrid" config='{"url" : "./json1.json"}'></mash-grid>
+</body>
+
+</html>
+
+
