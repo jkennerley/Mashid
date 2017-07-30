@@ -31,10 +31,17 @@
     </h2>
 
     <ul>
-        <li>review http://caniuse.com/ for native support</li>
-        <li>review https://www.webcomponents.org/ for support with polyfill</li>
-        <li>review https://github.com/webcomponents/webcomponentsjs web components js and browser reach with polyfill</li>
-        <li>review https://github.com/webcomponents/webcomponentsjs, See here to see what library and loaders to use to get going. 
+        <li>review 
+            <a href="http://caniuse.com/ ">http://caniuse.com/ </a>for native support</li>
+            <li>review <a href="https://www.webcomponents.org/ ">https://www.webcomponents.org/ </a>for support with polyfill</li>
+        
+        <li>review 
+        <a href="https://github.com/webcomponents/webcomponentsjs">https://github.com/webcomponents/webcomponentsjs</a>
+         web components js and browser reach with polyfill</li>
+        
+        <li>review 
+        <a href="https://github.com/webcomponents/webcomponentsjs">https://github.com/webcomponents/webcomponentsjs</a>`
+        See here to see what library and loaders to use to get going. 
             In particular, if the browser-reach is IE11, evergreen,  Safari9+, Android-Chrome, Mobile-Safari
             To get WC IE11, ie11 only runs ES5 and also ES5-classes do not support extending ES6 classes like HTML element.
             So better to 1. transpile back to ES5 2. custom-elements-es5-adapter.js 3. use webcomponents-loader.js.
@@ -42,9 +49,15 @@
             Use the window.WebComponenets & WebComponentsReady event to  
             see https://github.com/webcomponents/webcomponentsjs
         </li>
-
         <li>
-            Web Components js comes with BSD
+            For polymer and es5, for running in IE11, see <a href="https://www.polymer-project.org/2.0/docs/es6#compile">https://www.polymer-project.org/2.0/docs/es6#compile</a>
+        </li>
+        <li>
+            See here about the polyfills, 
+            <a href="https://www.webcomponents.org/polyfills">https://www.webcomponents.org/polyfills</a>
+        </li>        
+        <li>
+            Web Components JS comes with BSD license
         </li>
     </ul>
 
@@ -93,11 +106,9 @@
     </table>
 
     <hr />
-
-
     <section>
-
         <h3>
+            The 4 WC Items
         </h3>
         <ul>
             <li>Custom Elements</li>
@@ -105,15 +116,35 @@
             <li>Templates</li>
             <li>HTML Imports</li>
         </ul>
-
-        <h3>
-        </h3>
-
         <h3>
             Review these URLs
         </h3>
         <ul>
             <li>
+                ...
+            </li>
+        </ul>
+    </section>
+
+    <hr />
+    <section>
+        <h3>
+            A Polymer page skeleton as advised here <a href="https://github.com/webcomponents/webcomponentsjs">https://github.com/webcomponents/webcomponentsjs</a>
+        </h3>
+
+        <ul>
+            <li>See <a href="https://www.webcomponents.org/polyfills">https://www.webcomponents.org/polyfills</a></li>
+            <li>>bower install --save webcomponents/webcomponentsjs</li>
+            <li>See <a href="https://www.polymer-project.org/2.0/start/install-2-0">https://www.polymer-project.org/2.0/start/install-2-0</a></li>
+            <li>>npm install -g polymer-cli</li>
+            <li>>bower install Polymer/polymer#^2.0.0</li>
+        </ul>
+        <ul>
+            <li>
+
+                <a href="PolymerSkeleton">PolymerSkeleton</a>
+
+
             </li>
         </ul>
     </section>

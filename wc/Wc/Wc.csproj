@@ -481,6 +481,7 @@
     <Content Include="Views\Wc\SlideMenu.cshtml" />
     <Content Include="Views\Home\IndexOriginal.cshtml" />
     <Content Include="Views\Polymer\Index.cshtml" />
+    <Content Include="Views\Polymer\PolymerSkeleton.cshtml" />
     <None Include="web.jkl.config" />
     <None Include="web.TOTALAOC-JOHN.config" />
   </ItemGroup>

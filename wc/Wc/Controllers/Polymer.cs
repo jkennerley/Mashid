@@ -6,11 +6,12 @@ namespace Wc.Controllers
     {
         public ActionResult Index()
         {
-
             return View();
+        }
 
-
+        public ActionResult PolymerSkeleton()
+        {
+            return View();
         }
     }
 }
-

@@ -15,7 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "document-register-element": "^1.5.0"
+    "document-register-element": "^1.5.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.4"
   },
   "devDependencies": {
     "power-assert": "^1.4.4"
