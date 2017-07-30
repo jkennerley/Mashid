@@ -144,6 +144,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\aggrid.cs" />
+    <Compile Include="Controllers\Polymer.cs" />
     <Compile Include="Controllers\Wc.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -479,6 +480,7 @@
     <Content Include="Views\Wc\StarRating.cshtml" />
     <Content Include="Views\Wc\SlideMenu.cshtml" />
     <Content Include="Views\Home\IndexOriginal.cshtml" />
+    <Content Include="Views\Polymer\Index.cshtml" />
     <None Include="web.jkl.config" />
     <None Include="web.TOTALAOC-JOHN.config" />
   </ItemGroup>
