@@ -12,6 +12,6 @@
         "noImplicitReturns": true,
         "newLine": "CRLF",
         "removeComments": true,
-        "module": "system"
+        "module": "umd"
     }
 }

@@ -11,10 +11,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{3E
 	ProjectSection(SolutionItems) = preProject
 		bower.json = bower.json
 		..\LICENSE = ..\LICENSE
+		notes.md = notes.md
 		package.json = package.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wc.TestsJs", "Wc.TestsJs\Wc.TestsJs.csproj", "{E8DC40FA-C5E9-49BA-B15F-25DDFB3F89B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wc.TestsJs", "Wc.TestsJs\Wc.TestsJs.csproj", "{E8DC40FA-C5E9-49BA-B15F-25DDFB3F89B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wallaby", "Wallaby", "{8EBB01A2-1592-4C79-BE56-DDAFF3C230BA}"
+	ProjectSection(SolutionItems) = preProject
+		wallaby_Z0030_jasmine.js = wallaby_Z0030_jasmine.js
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,5 +43,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8EBB01A2-1592-4C79-BE56-DDAFF3C230BA} = {3E1798D9-C2D4-43B5-A162-5E32107F1C76}
 	EndGlobalSection
 EndGlobal

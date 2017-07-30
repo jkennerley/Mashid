@@ -281,6 +281,7 @@
     <Content Include="components\dist-ts\AgGrid\example2.js" />
     <Content Include="components\dist-ts\ComponentScaffold\component-scaffold.js" />
     <Content Include="components\dist-ts\CustomElementsApiAndLifecycle\vanilla-hw.js" />
+    <Content Include="components\dist-ts\mash-grid\mash-grid-starter.js" />
     <Content Include="components\dist-ts\mash-grid\mash-grid.js" />
     <Content Include="components\dist-ts\noop.js" />
     <Content Include="components\dist-ts\RandomQuoteAttributes\random-quote-attributes-component.js" />
@@ -312,7 +313,8 @@
     <Content Include="components\source-ts\CSSCustomProperties\CSSCustomProprties.html" />
     <Content Include="components\source-ts\CustomElementsApiAndLifecycle\vanilla-hw.html" />
     <Content Include="components\source-ts\CustomElementsApiAndLifecycle\vanilla-hw.js" />
-    <Content Include="components\source-ts\mash-grid\ava-foo.js" />
+    <Content Include="components\source-ts\mash-grid\mash-grid.UnitTest.html" />
+    <Content Include="components\source-ts\mash-grid\mash-grid-starter.js" />
     <Content Include="components\source-ts\mash-grid\mash-grid.html" />
     <Content Include="components\source-ts\mash-grid\mash-grid.js" />
     <Content Include="components\source-ts\WebComponentAttributes\random-quote-attributes-component.js" />
@@ -436,6 +438,7 @@
     <Content Include="components\source-babel\mash-grid\perf1.json" />
     <Content Include="components\source-ts\mash-grid\json1.json" />
     <Content Include="components\source-ts\mash-grid\LICENSE" />
+    <Content Include="components\dist-ts\mash-grid\mash-grid-starter.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
