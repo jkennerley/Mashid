@@ -320,6 +320,7 @@
     <Content Include="bower_components\webcomponentsjs\webcomponents-lite.js" />
     <Content Include="bower_components\webcomponentsjs\webcomponents-loader.js" />
     <Content Include="bower_components\webcomponentsjs\webcomponents-sd-ce.js" />
+    <Content Include="componentsPolymerES5\hello-world\hello-world.html" />
     <Content Include="componentsPolymer\hello-world\hello-world.html" />
     <Content Include="components\dist-babel\mash-grid\mash-grid.js" />
     <Content Include="components\dist-babel\noop.js" />
@@ -490,6 +491,7 @@
     <Content Include="components\source-ts\mash-grid\json1.json" />
     <Content Include="components\source-ts\mash-grid\LICENSE" />
     <Content Include="components\dist-ts\mash-grid\mash-grid-starter.js.map" />
+    <Content Include="componentsPolymerES5\polymer.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
