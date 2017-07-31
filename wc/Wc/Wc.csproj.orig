@@ -1,0 +1,829 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <TypeScriptCompileBlocked>True</TypeScriptCompileBlocked>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D01C6FF8-037F-439B-A98F-EB9B18B31512}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wc</RootNamespace>
+    <AssemblyName>Wc</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\aggrid.cs" />
+    <Compile Include="Controllers\Polymer.cs" />
+    <Compile Include="Controllers\VueController.cs" />
+    <Compile Include="Controllers\Wc.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bower_components\document-register-element\build\document-register-element.amd.js" />
+    <Content Include="bower_components\document-register-element\build\document-register-element.js" />
+    <Content Include="bower_components\document-register-element\build\document-register-element.max.amd.js" />
+    <Content Include="bower_components\document-register-element\build\document-register-element.max.js" />
+    <Content Include="bower_components\document-register-element\build\document-register-element.node.js" />
+    <Content Include="bower_components\document-register-element\build\dre-ie8-upfront-fix.js" />
+    <Content Include="bower_components\document-register-element\build\dre-ie8-upfront-fix.max.js" />
+    <Content Include="bower_components\document-register-element\build\innerHTML.js" />
+    <Content Include="bower_components\document-register-element\build\innerHTML.max.js" />
+    <Content Include="bower_components\document-register-element\examples\base.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-component-page\bowager-logo.png" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-component-page\core-component-page.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-component-page\demo.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-shared-lib\core-shared-lib.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-shared-lib\demo.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-shared-lib\tests\html\core-shared-lib.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-shared-lib\tests\js\htmltests.js" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-shared-lib\tests\runner.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-apis\demo.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-apis\google-apis.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-apis\google-client-api.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-apis\google-js-api.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-apis\google-jsapi.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-apis\google-maps-api.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-apis\google-plusone-api.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-apis\google-realtime-api.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-apis\google-youtube-api.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-map\demo.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-map\google-map-directions.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-map\google-map-search.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-map\google-map.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-map\metadata.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\polymer\layout.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\polymer\polymer.html" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\polymer\polymer.js" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\polymer\polymer.min.js" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\CustomElements.js" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\CustomElements.min.js" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\HTMLImports.js" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\HTMLImports.min.js" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\ShadowDOM.js" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\ShadowDOM.min.js" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\webcomponents-lite.js" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\webcomponents-lite.min.js" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\webcomponents.js" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\webcomponents.min.js" />
+    <Content Include="bower_components\document-register-element\examples\google-map-plain.html" />
+    <Content Include="bower_components\document-register-element\examples\google-map.html" />
+    <Content Include="bower_components\document-register-element\examples\ie8.html" />
+    <Content Include="bower_components\document-register-element\examples\js\document-register-element.js" />
+    <Content Include="bower_components\document-register-element\examples\js\dre-ie8-upfront-fix.js" />
+    <Content Include="bower_components\document-register-element\examples\js\Object.prototype.watch.js" />
+    <Content Include="bower_components\document-register-element\examples\js\register.js" />
+    <Content Include="bower_components\document-register-element\examples\js\restyle.js" />
+    <Content Include="bower_components\document-register-element\examples\js\sor-table.js" />
+    <Content Include="bower_components\document-register-element\examples\js\x-bind.js" />
+    <Content Include="bower_components\document-register-element\examples\js\x-clock.js" />
+    <Content Include="bower_components\document-register-element\examples\js\x-clock.react.js" />
+    <Content Include="bower_components\document-register-element\examples\js\x-map.js" />
+    <Content Include="bower_components\document-register-element\examples\sor-table.html" />
+    <Content Include="bower_components\document-register-element\examples\two-ways-binding.html" />
+    <Content Include="bower_components\document-register-element\examples\x-clock-react.html" />
+    <Content Include="bower_components\document-register-element\examples\x-clock.html" />
+    <Content Include="bower_components\document-register-element\examples\x-map-plain.html" />
+    <Content Include="bower_components\document-register-element\examples\x-map.html" />
+    <Content Include="bower_components\document-register-element\examples\x-star.html" />
+    <Content Include="bower_components\document-register-element\LICENSE.txt" />
+    <Content Include="bower_components\document-register-element\pony\index.js" />
+    <Content Include="bower_components\document-register-element\testrunner.js" />
+    <Content Include="bower_components\polymer\externs\closure-types.js" />
+    <Content Include="bower_components\polymer\externs\polymer-closure-types.html" />
+    <Content Include="bower_components\polymer\externs\polymer-externs.js" />
+    <Content Include="bower_components\polymer\externs\webcomponents-externs.js" />
+    <Content Include="bower_components\polymer\img\migration.png" />
+    <Content Include="bower_components\polymer\index.html" />
+    <Content Include="bower_components\polymer\lib\elements\array-selector.html" />
+    <Content Include="bower_components\polymer\lib\elements\custom-style.html" />
+    <Content Include="bower_components\polymer\lib\elements\dom-bind.html" />
+    <Content Include="bower_components\polymer\lib\elements\dom-if.html" />
+    <Content Include="bower_components\polymer\lib\elements\dom-module.html" />
+    <Content Include="bower_components\polymer\lib\elements\dom-repeat.html" />
+    <Content Include="bower_components\polymer\lib\legacy\class.html" />
+    <Content Include="bower_components\polymer\lib\legacy\legacy-element-mixin.html" />
+    <Content Include="bower_components\polymer\lib\legacy\mutable-data-behavior.html" />
+    <Content Include="bower_components\polymer\lib\legacy\polymer-fn.html" />
+    <Content Include="bower_components\polymer\lib\legacy\polymer.dom.html" />
+    <Content Include="bower_components\polymer\lib\legacy\templatizer-behavior.html" />
+    <Content Include="bower_components\polymer\lib\mixins\element-mixin.html" />
+    <Content Include="bower_components\polymer\lib\mixins\gesture-event-listeners.html" />
+    <Content Include="bower_components\polymer\lib\mixins\mutable-data.html" />
+    <Content Include="bower_components\polymer\lib\mixins\property-accessors.html" />
+    <Content Include="bower_components\polymer\lib\mixins\property-effects.html" />
+    <Content Include="bower_components\polymer\lib\mixins\template-stamp.html" />
+    <Content Include="bower_components\polymer\lib\utils\array-splice.html" />
+    <Content Include="bower_components\polymer\lib\utils\async.html" />
+    <Content Include="bower_components\polymer\lib\utils\boot.html" />
+    <Content Include="bower_components\polymer\lib\utils\case-map.html" />
+    <Content Include="bower_components\polymer\lib\utils\debounce.html" />
+    <Content Include="bower_components\polymer\lib\utils\flattened-nodes-observer.html" />
+    <Content Include="bower_components\polymer\lib\utils\flush.html" />
+    <Content Include="bower_components\polymer\lib\utils\gestures.html" />
+    <Content Include="bower_components\polymer\lib\utils\import-href.html" />
+    <Content Include="bower_components\polymer\lib\utils\mixin.html" />
+    <Content Include="bower_components\polymer\lib\utils\path.html" />
+    <Content Include="bower_components\polymer\lib\utils\render-status.html" />
+    <Content Include="bower_components\polymer\lib\utils\resolve-url.html" />
+    <Content Include="bower_components\polymer\lib\utils\settings.html" />
+    <Content Include="bower_components\polymer\lib\utils\style-gather.html" />
+    <Content Include="bower_components\polymer\lib\utils\templatize.html" />
+    <Content Include="bower_components\polymer\lib\utils\unresolved.html" />
+    <Content Include="bower_components\polymer\LICENSE.txt" />
+    <Content Include="bower_components\polymer\polymer-element.html" />
+    <Content Include="bower_components\polymer\polymer.html" />
+    <Content Include="bower_components\webcomponentsjs\.gitattributes" />
+    <Content Include="bower_components\webcomponentsjs\.gitignore" />
+    <Content Include="bower_components\webcomponentsjs\banner.txt" />
+    <Content Include="bower_components\webcomponentsjs\custom-elements-es5-adapter.js" />
+    <Content Include="bower_components\webcomponentsjs\entrypoints\custom-elements-es5-adapter-index.js" />
+    <Content Include="bower_components\webcomponentsjs\entrypoints\webcomponents-hi-ce-index.js" />
+    <Content Include="bower_components\webcomponentsjs\entrypoints\webcomponents-hi-index.js" />
+    <Content Include="bower_components\webcomponentsjs\entrypoints\webcomponents-hi-sd-ce-index.js" />
+    <Content Include="bower_components\webcomponentsjs\entrypoints\webcomponents-hi-sd-ce-pf-index.js" />
+    <Content Include="bower_components\webcomponentsjs\entrypoints\webcomponents-sd-ce-index.js" />
+    <Content Include="bower_components\webcomponentsjs\externs\webcomponents.js" />
+    <Content Include="bower_components\webcomponentsjs\gulpfile.js" />
+    <Content Include="bower_components\webcomponentsjs\src\post-polyfill.js" />
+    <Content Include="bower_components\webcomponentsjs\src\pre-polyfill.js" />
+    <Content Include="bower_components\webcomponentsjs\src\unresolved.js" />
+    <Content Include="bower_components\webcomponentsjs\tests\ce-import-upgrade-async.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\ce-import-upgrade.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\ce-import.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\ce-upgrade-order.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\ce-upgradedocumenttree.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\dev-loader-swizzled.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\dev-loader.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\force-polyfills.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\a1-define.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\a1-import.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\a1-instance.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\a1-reference.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\csp-import-1.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\csp-import-2.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\csp-script-1.js" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\csp-script-2.js" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\current-script.js" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\element-import-a.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\element-import-b.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\element-import.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\import-file.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\import-upgrade-order.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\script-1.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\script-2.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\simple-element-es5.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\imports\simple-element.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\integration-es5.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\integration.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\load.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\runner.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\smoke.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\template-and-CE.html" />
+    <Content Include="bower_components\webcomponentsjs\tests\template-and-imports.html" />
+    <Content Include="bower_components\webcomponentsjs\webcomponents-hi-ce.js" />
+    <Content Include="bower_components\webcomponentsjs\webcomponents-hi-sd-ce.js" />
+    <Content Include="bower_components\webcomponentsjs\webcomponents-hi.js" />
+    <Content Include="bower_components\webcomponentsjs\webcomponents-lite.js" />
+    <Content Include="bower_components\webcomponentsjs\webcomponents-loader.js" />
+    <Content Include="bower_components\webcomponentsjs\webcomponents-sd-ce.js" />
+    <Content Include="componentsPolymerES5\hello-world\hello-world.html" />
+    <Content Include="componentsPolymer\hello-world\hello-world.html" />
+    <Content Include="components\dist-babel\mash-grid\mash-grid.js" />
+    <Content Include="components\dist-babel\noop.js" />
+    <Content Include="components\dist-ts\AgGrid\example1.js" />
+    <Content Include="components\dist-ts\AgGrid\example2.js" />
+    <Content Include="components\dist-ts\ComponentScaffold\component-scaffold.js" />
+    <Content Include="components\dist-ts\CustomElementsApiAndLifecycle\vanilla-hw.js" />
+    <Content Include="components\dist-ts\mash-grid\mash-grid-starter.js" />
+    <Content Include="components\dist-ts\mash-grid\mash-grid.js" />
+    <Content Include="components\dist-ts\noop.js" />
+    <Content Include="components\dist-ts\RandomQuoteAttributes\random-quote-attributes-component.js" />
+    <Content Include="components\dist-ts\RandomQuotePropertiesWithShadowDom\random-quote-properties-component.js" />
+    <Content Include="components\dist-ts\RandomQuoteProperties\random-quote-properties-component.js" />
+    <Content Include="components\dist-ts\SlideMenuWithCSSCustomProperties\mtk-slide-menu.js" />
+    <Content Include="components\dist-ts\SlideMenuWithCSSMixins\mtk-slide-menu.js" />
+    <Content Include="components\dist-ts\SlideMenu\mtk-slide-menu.js" />
+    <Content Include="components\dist-ts\StarRatingFinal\rw-star-rating.js" />
+    <Content Include="components\dist-ts\StarRatingForEs5\star-rating.js" />
+    <Content Include="components\dist-ts\StarRatingWithCSSCustomProperties\star-rating.js" />
+    <Content Include="components\dist-ts\StarRating\star-rating.js" />
+    <Content Include="components\dist-ts\WebComponentsHelpers\WebComponentHelpers.js" />
+    <Content Include="components\dist-ts\x.js" />
+    <Content Include="components\dist-ts\__tobemoved\file1.js" />
+    <Content Include="components\dist-ts\__tobemoved\my-component.js" />
+    <Content Include="components\dist-ts\__tobemoved\my-component2.es5.js" />
+    <Content Include="components\dist-ts\__tobemoved\my-component2.js" />
+    <Content Include="components\dist-ts\__tobemoved\MyComponent.es5.js" />
+    <Content Include="components\dist-ts\__tobemoved\MyComponent.js" />
+    <Content Include="components\dist-ts\__tobemoved\random-quote-component.js" />
+    <Content Include="components\dist-ts\__tobemoved\x.js" />
+    <Content Include="components\source-babel\mash-grid\mash-grid.html" />
+    <Content Include="components\source-babel\mash-grid\mash-grid.js" />
+    <Content Include="components\source-ts\AgGrid\example1.js" />
+    <Content Include="components\source-ts\AgGrid\example2.js" />
+    <Content Include="components\source-ts\ComponentScaffold\component-scaffold.html" />
+    <Content Include="components\source-ts\ComponentScaffold\component-scaffold.js" />
+    <Content Include="components\source-ts\CSSCustomProperties\CSSCustomProprties.html" />
+    <Content Include="components\source-ts\CustomElementsApiAndLifecycle\vanilla-hw.html" />
+    <Content Include="components\source-ts\CustomElementsApiAndLifecycle\vanilla-hw.js" />
+    <Content Include="components\source-ts\mash-grid\mash-grid.UnitTest.html" />
+    <Content Include="components\source-ts\mash-grid\mash-grid-starter.js" />
+    <Content Include="components\source-ts\mash-grid\mash-grid.html" />
+    <Content Include="components\source-ts\mash-grid\mash-grid.js" />
+    <Content Include="components\source-ts\WebComponentAttributes\random-quote-attributes-component.js" />
+    <Content Include="components\source-ts\WebComponentAttributes\random-quote-attributes.html" />
+    <Content Include="components\source-ts\RandomQuotePropertiesWithShadowDom\random-quote-properties-component.js" />
+    <Content Include="components\source-ts\RandomQuotePropertiesWithShadowDom\random-quote-properties.html" />
+    <Content Include="components\source-ts\WebComponentProperties\random-quote-properties-component.js" />
+    <Content Include="components\source-ts\WebComponentProperties\random-quote-properties.html" />
+    <Content Include="components\source-ts\SlideMenuWithCSSCustomProperties\mtk-slide-menu.js" />
+    <Content Include="components\source-ts\SlideMenuWithCSSCustomProperties\SlideMenuClient.html" />
+    <Content Include="components\source-ts\SlideMenuWithCSSMixins\mtk-slide-menu.js" />
+    <Content Include="components\source-ts\SlideMenuWithCSSMixins\SlideMenuClient.html" />
+    <Content Include="components\source-ts\SlideMenu\mtk-slide-menu.js" />
+    <Content Include="components\source-ts\SlideMenu\SlideMenuClient.html" />
+    <Content Include="components\source-ts\StarRatingFinal\star-rating-final.html" />
+    <Content Include="components\source-ts\StarRatingFinal\rw-star-rating.js" />
+    <Content Include="components\source-ts\StarRatingForEs5\star-rating.js" />
+    <Content Include="components\source-ts\StarRatingForEs5\StarRatingClient.html" />
+    <Content Include="components\source-ts\StarRatingWithCSSCustomProperties\star-rating.js" />
+    <Content Include="components\source-ts\StarRatingWithCSSCustomProperties\StarRatingClient.html" />
+    <Content Include="components\source-ts\StarRating\star-rating.js" />
+    <Content Include="components\source-ts\StarRating\StarRatingClient.html" />
+    <Content Include="components\source-ts\UsingHTMLImports\notice.html" />
+    <Content Include="components\source-ts\UsingHTMLImports\UsingHTMLImports.html" />
+    <Content Include="components\source-ts\WCMethod2HTMLImports\HTMLImport.html" />
+    <Content Include="components\source-ts\WCMethod1JS\mycomponent.html" />
+    <Content Include="components\source-ts\WebComponentsHelpers\custom-style-interface.min.js" />
+    <Content Include="components\source-ts\WebComponentsHelpers\WebComponentHelpers.js" />
+    <Content Include="components\source-ts\WCMethod2HTMLImports\MyComponent.html" />
+    <Content Include="components\source-ts\WCMethod1JS\my-component.js" />
+    <Content Include="components\source-ts\__tobemoved\my-component2.html" />
+    <Content Include="components\source-ts\__tobemoved\my-component2.js" />
+    <Content Include="components\source-ts\__tobemoved\my-component2host.html" />
+    <Content Include="components\source-ts\__tobemoved\MyComponent.js" />
+    <Content Include="components\source-ts\__tobemoved\notice.html" />
+    <Content Include="components\source-ts\CustomElementBestPractices\CEBestPractice_random-quote-component.js" />
+    <Content Include="components\source-ts\CustomElementBestPractices\CEBestPractice.html" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="node_modules\vue\dist\vue.common.js" />
+    <Content Include="node_modules\vue\dist\vue.esm.js" />
+    <Content Include="node_modules\vue\dist\vue.js" />
+    <Content Include="node_modules\vue\dist\vue.min.js" />
+    <Content Include="node_modules\vue\dist\vue.runtime.common.js" />
+    <Content Include="node_modules\vue\dist\vue.runtime.esm.js" />
+    <Content Include="node_modules\vue\dist\vue.runtime.js" />
+    <Content Include="node_modules\vue\dist\vue.runtime.min.js" />
+    <Content Include="node_modules\vue\src\compiler\codegen\events.js" />
+    <Content Include="node_modules\vue\src\compiler\codegen\index.js" />
+    <Content Include="node_modules\vue\src\compiler\create-compiler.js" />
+    <Content Include="node_modules\vue\src\compiler\directives\bind.js" />
+    <Content Include="node_modules\vue\src\compiler\directives\index.js" />
+    <Content Include="node_modules\vue\src\compiler\directives\model.js" />
+    <Content Include="node_modules\vue\src\compiler\directives\on.js" />
+    <Content Include="node_modules\vue\src\compiler\error-detector.js" />
+    <Content Include="node_modules\vue\src\compiler\helpers.js" />
+    <Content Include="node_modules\vue\src\compiler\index.js" />
+    <Content Include="node_modules\vue\src\compiler\optimizer.js" />
+    <Content Include="node_modules\vue\src\compiler\parser\entity-decoder.js" />
+    <Content Include="node_modules\vue\src\compiler\parser\filter-parser.js" />
+    <Content Include="node_modules\vue\src\compiler\parser\html-parser.js" />
+    <Content Include="node_modules\vue\src\compiler\parser\index.js" />
+    <Content Include="node_modules\vue\src\compiler\parser\text-parser.js" />
+    <Content Include="node_modules\vue\src\compiler\to-function.js" />
+    <Content Include="node_modules\vue\src\core\components\index.js" />
+    <Content Include="node_modules\vue\src\core\components\keep-alive.js" />
+    <Content Include="node_modules\vue\src\core\config.js" />
+    <Content Include="node_modules\vue\src\core\global-api\assets.js" />
+    <Content Include="node_modules\vue\src\core\global-api\extend.js" />
+    <Content Include="node_modules\vue\src\core\global-api\index.js" />
+    <Content Include="node_modules\vue\src\core\global-api\mixin.js" />
+    <Content Include="node_modules\vue\src\core\global-api\use.js" />
+    <Content Include="node_modules\vue\src\core\index.js" />
+    <Content Include="node_modules\vue\src\core\instance\events.js" />
+    <Content Include="node_modules\vue\src\core\instance\index.js" />
+    <Content Include="node_modules\vue\src\core\instance\init.js" />
+    <Content Include="node_modules\vue\src\core\instance\inject.js" />
+    <Content Include="node_modules\vue\src\core\instance\lifecycle.js" />
+    <Content Include="node_modules\vue\src\core\instance\proxy.js" />
+    <Content Include="node_modules\vue\src\core\instance\render-helpers\bind-object-listeners.js" />
+    <Content Include="node_modules\vue\src\core\instance\render-helpers\bind-object-props.js" />
+    <Content Include="node_modules\vue\src\core\instance\render-helpers\check-keycodes.js" />
+    <Content Include="node_modules\vue\src\core\instance\render-helpers\render-list.js" />
+    <Content Include="node_modules\vue\src\core\instance\render-helpers\render-slot.js" />
+    <Content Include="node_modules\vue\src\core\instance\render-helpers\render-static.js" />
+    <Content Include="node_modules\vue\src\core\instance\render-helpers\resolve-filter.js" />
+    <Content Include="node_modules\vue\src\core\instance\render-helpers\resolve-slots.js" />
+    <Content Include="node_modules\vue\src\core\instance\render.js" />
+    <Content Include="node_modules\vue\src\core\instance\state.js" />
+    <Content Include="node_modules\vue\src\core\observer\array.js" />
+    <Content Include="node_modules\vue\src\core\observer\dep.js" />
+    <Content Include="node_modules\vue\src\core\observer\index.js" />
+    <Content Include="node_modules\vue\src\core\observer\scheduler.js" />
+    <Content Include="node_modules\vue\src\core\observer\watcher.js" />
+    <Content Include="node_modules\vue\src\core\util\debug.js" />
+    <Content Include="node_modules\vue\src\core\util\env.js" />
+    <Content Include="node_modules\vue\src\core\util\error.js" />
+    <Content Include="node_modules\vue\src\core\util\index.js" />
+    <Content Include="node_modules\vue\src\core\util\lang.js" />
+    <Content Include="node_modules\vue\src\core\util\options.js" />
+    <Content Include="node_modules\vue\src\core\util\perf.js" />
+    <Content Include="node_modules\vue\src\core\util\props.js" />
+    <Content Include="node_modules\vue\src\core\vdom\create-component.js" />
+    <Content Include="node_modules\vue\src\core\vdom\create-element.js" />
+    <Content Include="node_modules\vue\src\core\vdom\create-functional-component.js" />
+    <Content Include="node_modules\vue\src\core\vdom\helpers\extract-props.js" />
+    <Content Include="node_modules\vue\src\core\vdom\helpers\get-first-component-child.js" />
+    <Content Include="node_modules\vue\src\core\vdom\helpers\index.js" />
+    <Content Include="node_modules\vue\src\core\vdom\helpers\merge-hook.js" />
+    <Content Include="node_modules\vue\src\core\vdom\helpers\normalize-children.js" />
+    <Content Include="node_modules\vue\src\core\vdom\helpers\resolve-async-component.js" />
+    <Content Include="node_modules\vue\src\core\vdom\helpers\update-listeners.js" />
+    <Content Include="node_modules\vue\src\core\vdom\modules\directives.js" />
+    <Content Include="node_modules\vue\src\core\vdom\modules\index.js" />
+    <Content Include="node_modules\vue\src\core\vdom\modules\ref.js" />
+    <Content Include="node_modules\vue\src\core\vdom\patch.js" />
+    <Content Include="node_modules\vue\src\core\vdom\vnode.js" />
+    <Content Include="node_modules\vue\src\platforms\web\compiler\directives\html.js" />
+    <Content Include="node_modules\vue\src\platforms\web\compiler\directives\index.js" />
+    <Content Include="node_modules\vue\src\platforms\web\compiler\directives\model.js" />
+    <Content Include="node_modules\vue\src\platforms\web\compiler\directives\text.js" />
+    <Content Include="node_modules\vue\src\platforms\web\compiler\index.js" />
+    <Content Include="node_modules\vue\src\platforms\web\compiler\modules\class.js" />
+    <Content Include="node_modules\vue\src\platforms\web\compiler\modules\index.js" />
+    <Content Include="node_modules\vue\src\platforms\web\compiler\modules\style.js" />
+    <Content Include="node_modules\vue\src\platforms\web\compiler\options.js" />
+    <Content Include="node_modules\vue\src\platforms\web\compiler\util.js" />
+    <Content Include="node_modules\vue\src\platforms\web\entry-compiler.js" />
+    <Content Include="node_modules\vue\src\platforms\web\entry-runtime-with-compiler.js" />
+    <Content Include="node_modules\vue\src\platforms\web\entry-runtime.js" />
+    <Content Include="node_modules\vue\src\platforms\web\entry-server-basic-renderer.js" />
+    <Content Include="node_modules\vue\src\platforms\web\entry-server-renderer.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\class-util.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\components\index.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\components\transition-group.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\components\transition.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\directives\index.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\directives\model.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\directives\show.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\index.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\modules\attrs.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\modules\class.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\modules\dom-props.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\modules\events.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\modules\index.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\modules\style.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\modules\transition.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\node-ops.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\patch.js" />
+    <Content Include="node_modules\vue\src\platforms\web\runtime\transition-util.js" />
+    <Content Include="node_modules\vue\src\platforms\web\server\compiler.js" />
+    <Content Include="node_modules\vue\src\platforms\web\server\directives\index.js" />
+    <Content Include="node_modules\vue\src\platforms\web\server\directives\show.js" />
+    <Content Include="node_modules\vue\src\platforms\web\server\modules\attrs.js" />
+    <Content Include="node_modules\vue\src\platforms\web\server\modules\class.js" />
+    <Content Include="node_modules\vue\src\platforms\web\server\modules\dom-props.js" />
+    <Content Include="node_modules\vue\src\platforms\web\server\modules\index.js" />
+    <Content Include="node_modules\vue\src\platforms\web\server\modules\style.js" />
+    <Content Include="node_modules\vue\src\platforms\web\server\util.js" />
+    <Content Include="node_modules\vue\src\platforms\web\util\attrs.js" />
+    <Content Include="node_modules\vue\src\platforms\web\util\class.js" />
+    <Content Include="node_modules\vue\src\platforms\web\util\compat.js" />
+    <Content Include="node_modules\vue\src\platforms\web\util\element.js" />
+    <Content Include="node_modules\vue\src\platforms\web\util\index.js" />
+    <Content Include="node_modules\vue\src\platforms\web\util\style.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\compiler\directives\index.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\compiler\directives\model.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\compiler\index.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\compiler\modules\append.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\compiler\modules\class.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\compiler\modules\index.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\compiler\modules\props.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\compiler\modules\style.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\entry-compiler.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\entry-framework.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\entry-runtime-factory.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\components\index.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\components\transition-group.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\components\transition.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\directives\index.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\index.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\modules\attrs.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\modules\class.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\modules\events.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\modules\index.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\modules\style.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\modules\transition.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\node-ops.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\patch.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\runtime\text-node.js" />
+    <Content Include="node_modules\vue\src\platforms\weex\util\index.js" />
+    <Content Include="node_modules\vue\src\server\bundle-renderer\create-bundle-renderer.js" />
+    <Content Include="node_modules\vue\src\server\bundle-renderer\create-bundle-runner.js" />
+    <Content Include="node_modules\vue\src\server\bundle-renderer\source-map-support.js" />
+    <Content Include="node_modules\vue\src\server\create-basic-renderer.js" />
+    <Content Include="node_modules\vue\src\server\create-renderer.js" />
+    <Content Include="node_modules\vue\src\server\optimizing-compiler\codegen.js" />
+    <Content Include="node_modules\vue\src\server\optimizing-compiler\index.js" />
+    <Content Include="node_modules\vue\src\server\optimizing-compiler\modules.js" />
+    <Content Include="node_modules\vue\src\server\optimizing-compiler\optimizer.js" />
+    <Content Include="node_modules\vue\src\server\optimizing-compiler\runtime-helpers.js" />
+    <Content Include="node_modules\vue\src\server\render-context.js" />
+    <Content Include="node_modules\vue\src\server\render-stream.js" />
+    <Content Include="node_modules\vue\src\server\render.js" />
+    <Content Include="node_modules\vue\src\server\template-renderer\create-async-file-mapper.js" />
+    <Content Include="node_modules\vue\src\server\template-renderer\index.js" />
+    <Content Include="node_modules\vue\src\server\template-renderer\parse-template.js" />
+    <Content Include="node_modules\vue\src\server\template-renderer\template-stream.js" />
+    <Content Include="node_modules\vue\src\server\util.js" />
+    <Content Include="node_modules\vue\src\server\webpack-plugin\client.js" />
+    <Content Include="node_modules\vue\src\server\webpack-plugin\server.js" />
+    <Content Include="node_modules\vue\src\server\webpack-plugin\util.js" />
+    <Content Include="node_modules\vue\src\server\write.js" />
+    <Content Include="node_modules\vue\src\sfc\parser.js" />
+    <Content Include="node_modules\vue\src\shared\constants.js" />
+    <Content Include="node_modules\vue\src\shared\util.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bower_components\document-register-element\.bower.json" />
+    <Content Include="bower_components\document-register-element\bower.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-component-page\.bower.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-component-page\bower.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-component-page\README.md" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-shared-lib\.bower.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-shared-lib\bower.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-shared-lib\README.md" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\core-shared-lib\tests\tests.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-apis\.bower.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-apis\bower.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-apis\LICENSE" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-apis\README.md" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-map\.bower.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-map\bower.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-map\LICENSE" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\google-map\README.md" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\polymer\.bower.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\polymer\bower.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\polymer\build.log" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\polymer\README.md" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\.bower.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\bower.json" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\build.log" />
+    <Content Include="bower_components\document-register-element\examples\bower_components\webcomponentsjs\README.md" />
+    <Content Include="bower_components\document-register-element\README.md" />
+    <Content Include="bower_components\document-register-element\RESOURCES.md" />
+    <Content Include="bower_components\webcomponentsjs\.bower.json" />
+    <Content Include="bower_components\webcomponentsjs\.eslintrc.json" />
+    <Content Include="bower_components\webcomponentsjs\.travis.yml" />
+    <Content Include="bower_components\webcomponentsjs\bower.json" />
+    <Content Include="bower_components\webcomponentsjs\CONTRIBUTING.md" />
+    <Content Include="bower_components\webcomponentsjs\LICENSE.md" />
+    <Content Include="bower_components\webcomponentsjs\package.json" />
+    <Content Include="bower_components\webcomponentsjs\README.md" />
+    <Content Include="bower_components\webcomponentsjs\wct.conf.json" />
+    <Content Include="bower_components\webcomponentsjs\webcomponents-hi-ce.js.map" />
+    <Content Include="bower_components\webcomponentsjs\webcomponents-hi-sd-ce.js.map" />
+    <Content Include="bower_components\webcomponentsjs\webcomponents-hi.js.map" />
+    <Content Include="bower_components\webcomponentsjs\webcomponents-lite.js.map" />
+    <Content Include="bower_components\webcomponentsjs\webcomponents-sd-ce.js.map" />
+    <Content Include="bower_components\polymer\.bower.json" />
+    <Content Include="bower_components\polymer\bower.json" />
+    <Content Include="bower_components\polymer\package.json" />
+    <Content Include="bower_components\polymer\README.md" />
+    <Content Include="bower_components\polymer\wct.conf.json" />
+    <None Include="bundleconfig.json" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="components\tsconfig.json" />
+    <Content Include="components\dist-ts\AgGrid\example1.js.map" />
+    <Content Include="components\dist-ts\AgGrid\example2.js.map" />
+    <Content Include="components\dist-ts\ComponentScaffold\component-scaffold.js.map" />
+    <Content Include="components\dist-ts\noop.js.map" />
+    <Content Include="components\dist-ts\RandomQuoteAttributes\random-quote-attributes-component.js.map" />
+    <Content Include="components\dist-ts\RandomQuotePropertiesWithShadowDom\random-quote-properties-component.js.map" />
+    <Content Include="components\dist-ts\RandomQuoteProperties\random-quote-properties-component.js.map" />
+    <Content Include="components\dist-ts\SlideMenuWithCSSCustomProperties\mtk-slide-menu.js.map" />
+    <Content Include="components\dist-ts\SlideMenuWithCSSMixins\mtk-slide-menu.js.map" />
+    <Content Include="components\dist-ts\SlideMenu\mtk-slide-menu.js.map" />
+    <Content Include="components\dist-ts\StarRatingFinal\rw-star-rating.js.map" />
+    <Content Include="components\dist-ts\StarRatingForEs5\star-rating.js.map" />
+    <Content Include="components\dist-ts\StarRatingWithCSSCustomProperties\star-rating.js.map" />
+    <Content Include="components\dist-ts\StarRating\star-rating.js.map" />
+    <Content Include="components\dist-ts\WebComponentsHelpers\WebComponentHelpers.js.map" />
+    <Content Include="components\dist-ts\x.js.map" />
+    <Content Include="components\dist-ts\__tobemoved\file1.js.map" />
+    <Content Include="components\dist-ts\__tobemoved\my-component.js.map" />
+    <Content Include="components\dist-ts\__tobemoved\my-component2.es5.js.map" />
+    <Content Include="components\dist-ts\__tobemoved\my-component2.js.map" />
+    <Content Include="components\dist-ts\__tobemoved\MyComponent.es5.js.map" />
+    <Content Include="components\dist-ts\__tobemoved\MyComponent.js.map" />
+    <Content Include="components\dist-ts\__tobemoved\random-quote-component.js.map" />
+    <Content Include="components\dist-ts\__tobemoved\x.js.map" />
+    <Content Include="components\dist-ts\CustomElementsApiAndLifecycle\vanilla-hw.js.map" />
+    <Content Include="components\source-babel\mash-grid\perf1.json" />
+    <Content Include="components\source-ts\mash-grid\json1.json" />
+    <Content Include="components\source-ts\mash-grid\LICENSE" />
+    <Content Include="components\dist-ts\mash-grid\mash-grid-starter.js.map" />
+<<<<<<< HEAD
+    <Content Include="node_modules\vue\dist\README.md" />
+    <Content Include="node_modules\vue\LICENSE" />
+    <Content Include="node_modules\vue\package.json" />
+    <Content Include="node_modules\vue\README.md" />
+=======
+    <Content Include="componentsPolymerES5\polymer.json" />
+>>>>>>> learn-polymer
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Wc\Index.cshtml" />
+    <Content Include="Views\Home\WcHome.cshtml" />
+    <Content Include="Views\Wc\CustomElementsApiAndLifecyle.cshtml" />
+    <Content Include="Views\Wc\ExtendingWithMethodsOnCustomeElements.cshtml" />
+    <Content Include="Views\Wc\ExtendingNativeElements.cshtml" />
+    <Content Include="Views\Home\SendTestEmail.cshtml" />
+    <Content Include="Views\Wc\UsingShadowDomBasics.cshtml" />
+    <Content Include="Views\Wc\UsingHtmlTemplates.cshtml" />
+    <Content Include="Views\Wc\UsingHtmlImports.cshtml" />
+    <Content Include="Views\Wc\WCMethod1JS.cshtml" />
+    <Content Include="Views\Wc\WCMethod2HTMLImport.cshtml" />
+    <Content Include="Views\Wc\WCMethod2HTMLImportExperiment.cshtml" />
+    <Content Include="Views\Wc\MyComponent.cshtml" />
+    <Content Include="Views\Aggrid\Index.cshtml" />
+    <Content Include="Views\Aggrid\example1.cshtml" />
+    <Content Include="Views\Aggrid\example2.cshtml" />
+    <Content Include="Views\Wc\StarRating.cshtml" />
+    <Content Include="Views\Wc\SlideMenu.cshtml" />
+    <Content Include="Views\Home\IndexOriginal.cshtml" />
+    <Content Include="Views\Polymer\Index.cshtml" />
+<<<<<<< HEAD
+    <Content Include="Views\Vue\index.cshtml" />
+    <Content Include="Views\Vue\VueHelloWorld.cshtml" />
+=======
+    <Content Include="Views\Polymer\PolymerSkeleton.cshtml" />
+    <Content Include="Views\Polymer\PolymerSkeletonEvergreenAndIE11.cshtml" />
+>>>>>>> learn-polymer
+    <None Include="web.jkl.config" />
+    <None Include="web.TOTALAOC-JOHN.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="components\source-babel\noop.js" />
+    <TypeScriptCompile Include="components\source-ts\noop.ts" />
+    <TypeScriptCompile Include="components\source-ts\__tobemoved\x.ts" />
+    <TypeScriptCompile Include="node_modules\vue\types\index.d.ts" />
+    <TypeScriptCompile Include="node_modules\vue\types\options.d.ts" />
+    <TypeScriptCompile Include="node_modules\vue\types\plugin.d.ts" />
+    <TypeScriptCompile Include="node_modules\vue\types\vnode.d.ts" />
+    <TypeScriptCompile Include="node_modules\vue\types\vue.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2180</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2180/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="AfterBuild">
+  </Target>
+   -->
+  <Target Name="BeforeBuild">
+    <CallTarget Targets="ApplyMachineSpecificConfiguration" />
+  </Target>
+  <Target Name="ApplyMachineSpecificConfiguration" Condition="Exists('Web.$(Computername).config')">
+    <Message Text="$(Computername)">
+    </Message>
+    <XslTransformation XmlInputPaths="Web.config" XslInputPath="Web.$(Computername).config" OutputPaths="Web.$(Computername).config.output" />
+    <Copy SourceFiles="Web.$(Computername).config.output" DestinationFiles="Web.config" />
+  </Target>
+  <!-- 
+    Now, down to business: this is our target for applying the config transform.
+  -->
+  <!-- 
+  <Target Name="_VisualStudioApplyTransform">
+    <TransformXml Condition="Exists('webtrans.$(COMPUTERNAME).config')" Source="web.config" Transform="webtrans.$(COMPUTERNAME).config" Destination="web.out" />
+    Copy the temp file, back over the top of Web.config, the file handle opened by TransformXml is closed now: 
+    <Copy SourceFiles="Web.config.temp" DestinationFiles="Web.config" Condition="Exists('Web.config.temp')" />
+	  -->
+  <!-- 
+    <Copy Condition="Exists('web.out')" SourceFiles="web.out" DestinationFiles="web.config.target" />
+    Cleanup after ourselves: 
+    <Delete Files="Web.config.temp" Condition="Exists('Web.config.temp')" />
+    <Delete Files="web.$(COMPUTERNAME).out" Condition="Exists('web.$(COMPUTERNAME).out')" />
+  </Target>
+    -->
+</Project>
