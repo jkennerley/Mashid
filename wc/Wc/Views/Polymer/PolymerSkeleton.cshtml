@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+<!DocType html>
+
+<html>
+<head>
+    <!-- Load Custom Elements es5 adapter
+    <script src="bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="~/bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    -->
+
+    <!-- Load polyfills; note that "loader" will load these async
+    -->
+    <script src="~/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <!-- Load the es5 compiled custom element definition
+    <link rel="import" href="my-es5-element.html">
+    -->
+    <link rel="import" href="~/componentsPolymer/hello-world/hello-world.html">
+
+</head>
+
+<body>
+    <br />
+    Chrome : ok : 100ms ; 400ms ; 104Kb
+    <br />
+    Edge : ok : 
+    <br />
+    IE11 : NO : does not work
+    <br />
+    FireFox : ok : 24s :  VERY SLOW! OUCH takes at least 5 secs!
+
+    <br />
+    safari 10.1: ok : :  looks ok!
+
+
+    <!-- Runs custom element -->
+    <hello-world who="Unicorn"></hello-world>
+
+</body>
+</html>
