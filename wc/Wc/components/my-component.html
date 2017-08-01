@@ -1,0 +1,48 @@
+﻿<!--the template goes on the shadow dom and is not rendered -->
+<!--the file that does a link-rel-import of this file, immediaty after the link-rel-import...
+#document>html>head>template>#document-fragment> style + p  
+-->
+<template>
+    <style>
+        p {
+            color:rebeccapurple
+        }
+    </style>
+    <p>my web component</p>
+</template>
+
+<script>
+    // create the custom element
+
+    // Store reference the owner doument of this script,
+    // so we can the template element we just created
+    // At time of writing html import spec is only in Chrome
+    // So for other browsers need html-import polyfill
+    // see web components js suite of polyfills
+    // https://developer.mozilla.org/en-US/docs/Web/API/Document/currentScript
+    // bower install --save webcomponents/webcomponentsjs, to get document._currentScript 
+    const $ownerDocument = (document._currentScript || document.currentScript).ownerDocument;
+
+    // get the template ,form the owner document of this script
+    $template = $ownerDocument.querySelector("template");
+
+    // we have template from the shadow dom
+    // when component will be instanced and then put inot the dom
+    // when it is put into the dom, get the template and use that
+    class MyComponent extends HTMLElement {
+
+        connectedCallback() {
+            // copy contents of template. https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode
+            const $templateClone = document.importNode($template.content, true);
+            // this is a html element, add markup children
+            // i.e. the elements of the cloned template
+            this.appendChild($templateClone);
+        }
+    }
+
+    // the window needs to know about the cutom element,
+    // link the my-component tag to the class MyComponent
+    window.customElements.define("my-component", MyComponent);
+
+</script>
+
