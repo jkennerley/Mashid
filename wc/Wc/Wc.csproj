@@ -144,7 +144,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\aggrid.cs" />
-    <Compile Include="Controllers\Polymer.cs" />
+    <Compile Include="Controllers\PolymerController.cs" />
     <Compile Include="Controllers\VueController.cs" />
     <Compile Include="Controllers\Wc.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -634,6 +634,7 @@
     <Content Include="bower_components\polymer\package.json" />
     <Content Include="bower_components\polymer\README.md" />
     <Content Include="bower_components\polymer\wct.conf.json" />
+    <Content Include="bower.json" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">

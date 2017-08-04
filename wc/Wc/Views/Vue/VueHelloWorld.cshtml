@@ -2,32 +2,28 @@
 <!doctype html>
 
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" width="device-width, initial-scale=1, shrink-to-fit=no" />
-    
     @*
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link 
+        rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" 
+        crossorigin="anonymous"
+    >
     *@
+
 </head>
 
 <body>
 
-    <div id="growler-outside">
+<div id="growler-outside">
         <div id="growler" class="container">
-
             <span>{{counter}}</span>
-
-
             <br />
             <button class="btn btn-primary" v-on:click="onUpdateClick">Update</button>
             <br />
             <button class="btn btn-danger" v-on:click="onDestroyClick">Destroy</button>
-
-
-
-
         </div>
     </div>
 
@@ -48,10 +44,8 @@
         //    console.log('d c');
         //});
 
-
         document.addEventListener("DOMContentLoaded", function () {
             // Handler when the DOM is fully loaded
-
 
             //
             var foo = function () {
