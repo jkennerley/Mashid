@@ -145,6 +145,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\aggrid.cs" />
     <Compile Include="Controllers\PolymerController.cs" />
+    <Compile Include="Controllers\SnabbdomController.cs" />
     <Compile Include="Controllers\VueController.cs" />
     <Compile Include="Controllers\Wc.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -720,6 +721,8 @@
     <Content Include="Views\Vue\VueHelloWorld.cshtml" />
     <Content Include="Views\Polymer\PolymerSkeleton.cshtml" />
     <Content Include="Views\Polymer\PolymerSkeletonEvergreenAndIE11.cshtml" />
+    <Content Include="Views\Snabbdom\index.cshtml" />
+    <Content Include="Views\Snabbdom\SanbbdomHelloWorld.cshtml" />
     <None Include="web.jkl.config" />
     <None Include="web.TOTALAOC-JOHN.config" />
   </ItemGroup>

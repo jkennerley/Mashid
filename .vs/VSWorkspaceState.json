@@ -1,11 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\wc",
     "\\wc\\Wc",
+    "\\wc\\Wc\\Controllers",
     "\\wc\\Wc\\Views",
+    "\\wc\\Wc\\Views\\Home",
+    "\\wc\\Wc\\Views\\Snabbdom",
     "\\wc\\Wc\\Views\\Vue"
   ],
-  "SelectedNode": "\\wc\\Wc\\Views\\Vue\\VueHelloWorld.cshtml",
+  "SelectedNode": "\\wc",
   "PreviewInSolutionExplorer": false
 }
